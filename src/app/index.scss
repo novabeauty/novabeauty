@@ -43,6 +43,14 @@ html {
   padding: 0.2em 0;
 }
 
+.fifth-section{
+  max-height: 504px;
+  .left-panel{
+    max-height: 504px;
+    min-height: 504px;
+  }
+}
+
 .left-panel{
   min-height: 100vh;
   .logo-container{
@@ -50,7 +58,6 @@ html {
     background-image: url(../assets/images/koltunova.svg);
     background-repeat:no-repeat;
     background-position: center center;
-
     img {
       object-fit: contain;
     }
@@ -182,6 +189,7 @@ html {
 .koltunova-tour:hover{
   background-image: url(../assets/images/tour.jpg);
   color: black;
+  cursor: pointer;
 }
 
 .koltunova-about {
@@ -284,7 +292,7 @@ html {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-}
+  }
 
 .image-2{
   background-image: url(../assets/images/a2.jpg);
@@ -307,6 +315,7 @@ html {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   &:hover{
+    cursor: pointer;
     .service-alarm-title{
       color: white;
     }
@@ -317,36 +326,42 @@ html {
   background-image: url(../assets/images/s_1b.jpg);
   &:hover{
     background-image: url(../assets/images/s_1.jpg);
+    cursor: pointer;
   }
 }
 .service-image-2{
   background-image: url(../assets/images/s_2b.jpg);
   &:hover{
     background-image: url(../assets/images/s_2.jpg);
+    cursor: pointer;
   }
 }
 .service-image-3{
   background-image: url(../assets/images/s_3b.jpg);
   &:hover{
     background-image: url(../assets/images/s_3.jpg);
+    cursor: pointer;
   }
 }
 .service-image-4{
   background-image: url(../assets/images/s_4b.jpg);
   &:hover{
     background-image: url(../assets/images/s_4.jpg);
+    cursor: pointer;
   }
 }
 .service-image-5{
   background-image: url(../assets/images/s_5b.jpg);
   &:hover{
     background-image: url(../assets/images/s_5.jpg);
+    cursor: pointer;
   }
 }
 .service-image-6{
   background-image: url(../assets/images/s_6b.jpg);
   &:hover{
     background-image: url(../assets/images/s_6.jpg);
+    cursor: pointer;
   }
 }
 
@@ -392,6 +407,46 @@ html {
   }
 }
 
+.regards{
+  text-align: center;
+  padding-top: 70px;
+}
+
+.map{
+  background-image: url(../assets/images/map_b.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 20vh;
+  &:hover{
+    background-image: url(../assets/images/map.jpg);
+    cursor: pointer;
+    }
+}
+.address-text{
+  font-size: 14px;
+  font-family: "Playfair Display", sans-serif;
+  padding-top: 25px;
+}
+.working-hours{
+  .title{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .working-hours-when{
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    line-height: 19px;
+    p{
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+    }
+  }
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
