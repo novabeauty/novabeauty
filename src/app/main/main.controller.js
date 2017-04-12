@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $mdSidenav) {
+  function MainController($timeout, toastr, $mdSidenav, $http) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -16,6 +16,10 @@
     vm.scrollToSection = scrollTo;
     vm.openMap = openMap;
     vm.toggleNavigation = toggleNavigation;
+
+    var rates = {};
+
+    var exchangeApi = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDEUR%22%2C%20%22USDUAH%22%2C%20%22EURUAH%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
 
 
     function toggleNavigation(){
@@ -51,11 +55,38 @@
       vm.classAnimation = '';
     }
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+    function calculatePrice(price, currency, rates){
+      //USDEUR, EURUAH, USDUAH
 
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
+      var result = {eur:0, usd:0, uah:0};
+      if(currency === 'UAH'){
+        result.usd = price/rates['USDUAH'];
+        result.eur = price/rates['EURUAH']
+        result.uah = price;
+      }
+      if(currency === 'USD'){
+        result.usd = price;
+        result.eur = price*rates['UER']
+        result.uah = price*rates['USDUAH'];
+      }
+
+    }
+
+    function getWebDevTec() {
+      $http.get(exchangeApi).then(function(result)
+      {
+        for(var index in result.data.query.results.rate){
+          var obj = result.data.query.results.rate[index];
+          rates[obj.id] = obj.Rate;
+        }
+        $http.get("prices.json").then(function(result){
+            for(var cIndex in result.data.categories){
+              var category = result.data.categories[cIndex];
+              for(var sIndex in category.services){
+                console.log(category.services[sIndex].name);
+              }
+            }
+        }, function(){console.log("failed");});
       });
     }
   }

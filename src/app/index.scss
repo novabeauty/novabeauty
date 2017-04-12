@@ -109,7 +109,7 @@ html {
 .landing-image{
   height: 100vh;
   @include breakpoint($screen-mobile){
-    height: auto;
+    height: 50vh;
   }
 
   background-image: url(../assets/images/back.jpg);
