@@ -1,3 +1,46 @@
+<md-toolbar class="only-mobile" hide show-sm show-md show-xs>
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" ng-click="main.toggleNavigation()" aria-label="Open Menu"><md-icon md-svg-src="assets/images/menu.svg"></md-icon></md-button>
+    <span flex><img src="../assets/images/koltunova.svg"/></span>
+    <md-button class="md-icon-button" aria-label="Call"><md-icon md-svg-src="assets/images/phone.svg"></md-icon></md-button>
+  </div>
+</md-toolbar>
+
+<md-sidenav class="md-sidenav-left gradient-background" md-component-id="left"
+            md-disable-backdrop md-whiteframe="4">
+
+  <div flex class="mobile-logo-container">
+    &nbsp;
+  </div>
+  <md-content>
+    <div class="menu-container" layout-align="center">
+
+      <md-list flex>
+        <md-list-item ng-click="main.scrollToSection('#about')" class="md-primary">
+          <md-icon md-svg-src="assets/images/n_logo.svg"></md-icon>
+          <p>О Клинике</p>
+        </md-list-item>
+        <md-list-item ng-click="main.scrollToSection('#services')">
+          <md-icon md-svg-src="assets/images/diamond.svg"></md-icon>
+          <p>Услуги</p>
+        </md-list-item>
+        <md-list-item ng-click="alert(1)">
+          <md-icon md-svg-src="assets/images/shop.svg"></md-icon>
+          <p>Магазин</p>
+        </md-list-item>
+        <md-list-item ng-click="main.scrollToSection('#alarm-services')">
+          <md-icon md-svg-src="assets/images/season.svg"></md-icon>
+          <p>Сезонные предложения</p>
+        </md-list-item>
+        <md-list-item ng-click="main.scrollToSection('#location')">
+          <md-icon md-svg-src="assets/images/map.svg"></md-icon>
+          <p>Как нас найти</p>
+        </md-list-item>
+      </md-list>
+    </div>
+  </md-content>
+
+</md-sidenav>
 <div layout="vertical" class="first-section" layout-fill>
     <div class="left-panel" flex="25" layout="column" layout-fill>
       <div class="logo-container logo" layout-align="center center">
@@ -86,7 +129,7 @@
     <div layout="column" class="services-section">
       <div layout="row" class="section-row">
         <div flex="50" class="section-image image-1">&nbsp;</div>
-        <div flex="50" class="section gradient-background" layout="column">
+        <div flex class="section gradient-background" layout="column" layout-fill>
           <div class="service-section-title" layout="column">
             <div layout="row">
               <div class="section-circle">&nbsp;</div>
@@ -139,7 +182,7 @@
         </div>
       </div>
       <div layout="row" class="section-row">
-        <div flex="50" class="section no-background" layout="column">
+        <div class="section no-background" layout="column">
           <div class="service-section-title" layout="column">
             <div layout="row">
               <div class="section-circle">&nbsp;</div>
@@ -194,7 +237,7 @@
       </div>
       <div layout="row" class="section-row">
         <div flex="50" class="section-image image-3">&nbsp;</div>
-        <div flex="50" class="section gradient-background" layout="column">
+        <div flex class="section gradient-background" layout="column">
           <div class="service-section-title" layout="column">
             <div layout="row">
               <div class="section-circle">&nbsp;</div>
@@ -247,7 +290,7 @@
         </div>
       </div>
       <div layout="row" class="section-row">
-        <div flex="50" class="section no-background" layout="column">
+        <div flex class="section no-background" layout="column">
           <div class="service-section-title" layout="column">
             <div layout="row">
               <div class="section-circle">&nbsp;</div>
@@ -314,27 +357,27 @@
     </div>
   </div>
   <div layout="row" flex layout-wrap layout-align="stretch" class="services-alarm gradient-background">
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-1">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-1">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Вакуумно-роликовый массаж</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-2">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-2">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Составление индивидуальных програм питания</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-3">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-3">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Ультразвуковые процедуры (пилинг, увлажнение, лечение морщин)</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-4">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-4">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Детоксикация и укрепление иммунитета</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-5">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-5">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Обёртывание и моделирование</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
-    <div layout-align="space-between center" layout="column" flex="33" class="service-alarm-container service-image-6">
+    <div layout-align="space-between center" layout="column" flex-md="50" flex-sm="50" flex-xs="50" flex="33" class="service-alarm-container service-image-6">
       <div class="service-alarm-title wow zoomIn" data-wow-duration="1s">Диагностика новообразований</div>
       <div class="service-alarm-price wow zoomInUp" data-wow-duration="1s">400 гривен сеанс</div>
     </div>
@@ -359,8 +402,8 @@
       </div>
     </div>
   </div>
-  <div layout="row" flex class="contact-container" layout-fill layout-align="stretch">
-    <div flex="50" layout="column" flex layout-align="center stretch" layout-fill>
+  <div layout-gt-md="row" layout-xs="column" layout-sm="column" layout-md="column" flex class="contact-container" layout-fill layout-align="stretch">
+    <div flex layout="column" flex layout-align="center stretch" layout-fill>
       <div class="logo-container">
         <div class="logo">&nbsp;</div>
       </div>
@@ -371,6 +414,6 @@
       </div>
       <div class="regards" layout-align="center center" flex><img src="assets/images/regards.jpg" /></div>
     </div>
-    <div flex="50" class="map" ng-click="main.openMap()"><div class="place-map">&nbsp;</div></div>
+    <div flex-gt-md="50" class="map" ng-click="main.openMap()"><div class="place-map">&nbsp;</div></div>
   </div>
 </div>
