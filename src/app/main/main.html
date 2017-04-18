@@ -24,7 +24,7 @@
           <md-icon md-svg-src="assets/images/diamond.svg"></md-icon>
           <p>Услуги</p>
         </md-list-item>
-        <md-list-item ng-click="alert(1)">
+        <md-list-item ng-click="main.openPriceDialog()">
           <md-icon md-svg-src="assets/images/shop.svg"></md-icon>
           <p>Магазин</p>
         </md-list-item>
@@ -60,7 +60,7 @@
             <md-icon md-svg-src="assets/images/diamond.svg"></md-icon>
             <p>Услуги</p>
           </md-list-item>
-          <md-list-item ng-click="alert(1)">
+          <md-list-item ng-click="main.openPriceDialog()">
             <md-icon md-svg-src="assets/images/shop.svg"></md-icon>
               <p>Магазин</p>
           </md-list-item>
@@ -96,17 +96,25 @@
   </div>
   <div layout="column" flex layout-fill class="about-section">
     <div class="koltunova-about gradient-background wow fadeIn" data-wow-duration="1s" layout="column">
-      <div class="article-title wow zoomIn" data-wow-duration="1s">Клиника доктора Колтуновой</div>
+      <div class="article-title wow zoomIn" data-wow-duration="1s">Приветствую вас в нашей клинике! </div>
       <div class="article-content  wow zoomIn" data-wow-duration="1s">
-        <p>Я очень рада тому, что Вы выбрали время познакомиться со мной и моей клиникой – ведь клиника косметологии и эстетической медицины создана для того, чтобы всегда могли выглядеть безупречно!
-          Посетители клиники – мужчины и женщины с активной жизненной позицией. Для тех, чья внешность – отражение статуса, благосостояния и успешности в жизни.
+        <p>
+          Вот уже более 25 лет, я помогла большому количеству мужчин, женщин и детей быть счастливыми, делая их здоровее и моложе. Мои пациенты смогли обрести красоту, уверенность в себе, гармонию и свободу при помощи новейших технологий эстетической медицины, моего опыта, и команды Nova Beauty.
         </p>
         <p>
-          Долгие годы международной практики позволили мне накопить огромный опыт и занять одну из первых позиций по контурной пластике, инъекционным технологиям, безоперационному омоложению лица и коррекции тела.
+          Быть здоровым – значит быть красивым, и мы поможем вам в достижении натуральной красоты, без тяжелых операций, и осложнений.<br>
+          Будем рады увидеть вас в Nova Beauty!
+        </p>
+        <p>
+          <br>
+          <br>
+          С Уважением,<br>
+          Наталья Борисовна Колтунова,<br>
+          Доктор Высшей Категории
         </p>
       </div>
     </div>
-    <div class="koltunova-tour" layout="column">
+    <div class="koltunova-tour" layout="column" ng-click="main.openTour()">
       <div class="section-icon rectangle-45" layout="column" layout-align="center center">
         <md-icon md-svg-src="assets/images/n_logo.svg"></md-icon>
       </div>
@@ -136,41 +144,41 @@
               <div class="section-text">Косметология</div>
             </div>
             <md-list class="services-list">
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Инъекционная косметология</h3>
                   <p>Secondary text</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Пилинги</h3>
                   <p>Удаление, отшелушивание верхнего ороговевшего слоя кожи</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Контурная пластика</h3>
                   <p>Корекция гидроксиапатитом кальция и полимолочкой кислотой</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Лазерная косметология</h3>
                   <p>Ювидерм, Ялупро</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Аппаратная косметология</h3>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Косметические уходы</h3>
@@ -182,48 +190,48 @@
         </div>
       </div>
       <div layout="row" class="section-row">
-        <div class="section no-background" layout="column">
+        <div class="section no-background" flex layout="column">
           <div class="service-section-title" layout="column">
             <div layout="row">
               <div class="section-circle">&nbsp;</div>
               <div class="section-text">Косметология</div>
             </div>
             <md-list class="services-list">
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Инъекционная косметология</h3>
                   <p>Secondary text</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Пилинги</h3>
                   <p>Удаление, отшелушивание верхнего ороговевшего слоя кожи</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Контурная пластика</h3>
                   <p>Корекция гидроксиапатитом кальция и полимолочкой кислотой</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Лазерная косметология</h3>
                   <p>Ювидерм, Ялупро</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Аппаратная косметология</h3>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Косметические уходы</h3>
@@ -244,41 +252,41 @@
               <div class="section-text">Косметология</div>
             </div>
             <md-list class="services-list">
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Инъекционная косметология</h3>
                   <p>Secondary text</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Пилинги</h3>
                   <p>Удаление, отшелушивание верхнего ороговевшего слоя кожи</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Контурная пластика</h3>
                   <p>Корекция гидроксиапатитом кальция и полимолочкой кислотой</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Лазерная косметология</h3>
                   <p>Ювидерм, Ялупро</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Аппаратная косметология</h3>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Косметические уходы</h3>
@@ -297,41 +305,41 @@
               <div class="section-text">Косметология</div>
             </div>
             <md-list class="services-list">
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Инъекционная косметология</h3>
                   <p>Secondary text</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Пилинги</h3>
                   <p>Удаление, отшелушивание верхнего ороговевшего слоя кожи</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Контурная пластика</h3>
                   <p>Корекция гидроксиапатитом кальция и полимолочкой кислотой</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Лазерная косметология</h3>
                   <p>Ювидерм, Ялупро</p>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Аппаратная косметология</h3>
                 </div>
               </md-list-item>
-              <md-list-item ng-click="alert(1)" class="md-primary md-2-line">
+              <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
                   <h3>Косметические уходы</h3>
@@ -383,8 +391,8 @@
     </div>
   </div>
 </div>
-<div layout="vertical" class="fifth-section" id="location" layout-fill>
-  <div class="left-panel gradient-background" flex="25" layout="column" layout-fill>
+<div layout="vertical" class="fifth-section gradient-background" id="location" layout-fill>
+  <div class="left-panel" flex="25" layout="column" layout-fill>
     <div class="section-title" layout="column" layout-align="center center">
       <div layout="row" layout-align="center center" class="wow bounceInDown" data-wow-duration="1s">
         <div class="section-circle">&nbsp;</div>
@@ -411,9 +419,32 @@
         <div class="phone"><md-icon md-svg-src="assets/images/phone.svg"></md-icon><span>044 230 16 01</span></div>
         <div class="whatsapp"><md-icon md-svg-src="assets/images/whatsapp.svg"></md-icon><span>093 633 46 60</span></div>
         <div class="email"><md-icon md-svg-src="assets/images/email.svg"></md-icon><span>mail@novabeauty.biz</span></div>
+        <div class="license">Лицензия №063128</div>
       </div>
-      <div class="regards" layout-align="center center" flex><img src="assets/images/regards.jpg" /></div>
+      <div class="regards" layout-align="center center" flex><img src="assets/images/regals_2.jpeg" /></div>
     </div>
     <div flex-gt-md="50" class="map" ng-click="main.openMap()"><div class="place-map">&nbsp;</div></div>
   </div>
 </div>
+<!--<div layout="vertical" class="service-section" id="services-section" layout-fill>-->
+  <!--<md-grid-list flex layout-fill-->
+    <!--md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="4"-->
+    <!--md-row-height-gt-md="1:1" md-row-height="2:2"-->
+    <!--md-gutter="12px" md-gutter-gt-sm="8px" >-->
+    <!--<md-grid-tile class="md-whiteframe-3dp" ng-repeat="serviceCategory in main.services" ng-class="main.getSectionClass($index)" "-->
+                  <!--md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" layout="column">-->
+      <!--<div layout="column" flex layout-fill class="service-section-container">-->
+        <!--<div class="price-section-title"><span>{{serviceCategory.name}}</span></div>-->
+        <!--<div class="price-section-prices" layout="column">-->
+          <!--<div class="price-section-item" ng-repeat="service in serviceCategory.services" layout="row" layout-align="space-between start">-->
+            <!--<div class="price-section-item-name" >{{service.name}}</div>-->
+            <!--<div class="price-section-item-price-container" layout="column" >-->
+              <!--<div class="main-price">{{service.price}} {{service.currency}}</div>-->
+              <!--<div class="secondary-price">{{service.price}} {{service.currency}}</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</md-grid-tile>-->
+  <!--</md-grid-list>-->
+<!--</div>-->

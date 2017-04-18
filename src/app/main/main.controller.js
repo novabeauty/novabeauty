@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, toastr, $mdSidenav, $http) {
+  function MainController($timeout, toastr, $mdSidenav, $http, $mdDialog) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -16,8 +16,73 @@
     vm.scrollToSection = scrollTo;
     vm.openMap = openMap;
     vm.toggleNavigation = toggleNavigation;
+    vm.services = {};
+
+    vm.getSectionClass = function(index){
+      return "price-section-image-"+index;
+    };
+
+    vm.openPriceDialog = function(ev) {
+      $mdDialog.show({
+          controller: DialogController,
+          controllerAs: 'dialog',
+          template: "<md-dialog>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши цены</span>" +
+          "<md-button class='md-icon-button' ng-click='cancel()'><md-icon md-svg-src='assets/images/close.svg'></md-icon></md-button>" +
+          "</div></md-toolbar>   <md-dialog-content>        <div layout=\"vertical\" class=\"service-section gradient-background\" id=\"services-section\" layout-fill>  " +
+          "<md-grid-list flex layout-fill   " +
+          " md-cols-xs=\"1\" md-cols-sm=\"1\" md-cols-md=\"2\" md-cols-gt-md=\"3\"    md-row-height-gt-md=\"1:1\" md-row-height=\"2:2\"    md-gutter=\"12px\" md-gutter-gt-sm=\"8px\" >   " +
+          " <md-grid-tile class=\"md-whiteframe-3dp\" ng-repeat=\"serviceCategory in availableService\" ng-class=\"getSectionClass($index)\" \"                 " +
+          " md-rowspan=\"1\" md-colspan=\"1\" md-colspan-sm=\"1\" md-colspan-xs=\"1\" layout=\"column\">      " +
+          "<div layout=\"column\" flex layout-fill class=\"service-section-container\">        " +
+          " <div class=\"price-section-title\"><span>{{serviceCategory.name}}</span></div>       " +
+          " <div class=\"price-section-prices\" layout=\"column\">          " +
+          "<div class=\"price-section-item\" ng-repeat=\"service in serviceCategory.services\" layout=\"row\" layout-align=\"space-between start\">            " +
+          "<div class=\"price-section-item-name\" >{{service.name}}</div>            <div class=\"price-section-item-price-container\" layout=\"column\" >              " +
+          "<div class=\"main-price\">{{service.price}} {{service.currency}}</div>             " +
+          " <div class=\"secondary-price\">{{service.price}} {{service.currency}}</div>            " +
+          "</div>          </div>        </div>      </div>    </md-grid-tile>  </md-grid-list></div></md-dialog-content>          </form>          </md-dialog>",
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          locals :{items : vm.services},
+          clickOutsideToClose:true,
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        })
+        .then(function(answer) {
+          $scope.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          $scope.status = 'You cancelled the dialog.';
+        });
+    };
+
+    function DialogController($scope, $mdDialog, items) {
+      this.availableService = items;
+      $scope.availableService = items;
+      $scope.hide = function() {
+        $mdDialog.hide();
+      };
+
+      $scope.cancel = function() {
+        $mdDialog.cancel();
+      };
+
+      $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+      };
+      $scope.getSectionClass = function(index){
+        return "price-section-image-"+index;
+      };
+    }
 
     var rates = {};
+
+    var tourURL = 'https://youtu.be/NLBGd0gXvD8';
+
+    vm.openTour = function(){
+      var win = window.open(tourURL, '_blank');
+      win.focus();
+    };
+
+
 
     var exchangeApi = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDEUR%22%2C%20%22USDUAH%22%2C%20%22EURUAH%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
 
@@ -60,16 +125,21 @@
 
       var result = {eur:0, usd:0, uah:0};
       if(currency === 'UAH'){
-        result.usd = price/rates['USDUAH'];
-        result.eur = price/rates['EURUAH']
+        result.usd = Math.floor(price/rates['USDUAH']);
+        result.eur = Math.floor(price/rates['EURUAH']);
         result.uah = price;
       }
       if(currency === 'USD'){
         result.usd = price;
-        result.eur = price*rates['UER']
-        result.uah = price*rates['USDUAH'];
+        result.eur = Math.floor(price*rates['USDEUR']);
+        result.uah = Math.floor(price*rates['USDUAH']);
       }
-
+      if(currency === 'EUR'){
+        result.usd = Math.floor(price/rates['USDEUR']);
+        result.eur = price;
+        result.uah = Math.floor(price*rates['EURUAH']);
+      }
+      return result;
     }
 
     function getWebDevTec() {
@@ -83,9 +153,15 @@
             for(var cIndex in result.data.categories){
               var category = result.data.categories[cIndex];
               for(var sIndex in category.services){
-                console.log(category.services[sIndex].name);
+                var service = category.services[sIndex];
+                console.log(service.name);
+                var prices = calculatePrice(service.price, service.currency, rates);
+                console.log("USD: " + prices.usd);
+                console.log("EUR: " + prices.eur);
+                console.log("UAH: " + prices.uah);
               }
             }
+          vm.services = result.data.categories;
         }, function(){console.log("failed");});
       });
     }

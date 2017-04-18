@@ -31,6 +31,18 @@ $screen-desktop: 960px;
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+md-toolbar{
+  background-color: #f2f2f2 !important;
+
+  h2{
+    color: black;
+  }
+}
+
+md-dialog{
+  background-color: #f0f2f6;
+}
+
 .only-mobile{
   background-color: #f2f2f2 !important;
   .md-icon-button{
@@ -71,10 +83,10 @@ html {
 }
 
 .fifth-section{
-  max-height: 527px;
+  max-height: 6100px;
   .left-panel{
-    max-height: 527px;
-    min-height: 527px;
+    max-height: 610px;
+    min-height: 610px;
   }
 }
 
@@ -271,7 +283,7 @@ html {
   .article-content{
     font-family: Roboto, sans-serif;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 24px;
     color: black;
 
     @include breakpoint($screen-mobile){
@@ -477,6 +489,7 @@ html {
   transition: all .5s ease-in-out;
 }
 .contact-container{
+  background-color: white;
   .logo{
     background-image: url(../assets/images/koltunova.svg);
     background-repeat: no-repeat;
@@ -560,6 +573,106 @@ html {
   -webkit-background-size: contain;
   background-size: contain;
   background-position: center;
+}
+
+.price-section-image-0{
+  background-image: url(../assets/images/svc_b_0.jpg);
+}
+
+.price-section-image-1{
+  background-image: url(../assets/images/svc_b_1.jpg);
+}
+.price-section-image-2{
+  background-image: url(../assets/images/svc_b_2.jpg);
+}
+
+.price-section-image-3{
+  background-image: url(../assets/images/svc_b_3.jpg);
+}
+
+.price-section-image-4{
+  background-image: url(../assets/images/svc_b_4.jpg);
+}
+
+.price-section-image-5{
+  background-image: url(../assets/images/svc_b_5.jpg);
+}
+
+.price-section-image-6{
+  background-image: url(../assets/images/svc_b_6.jpg);
+}
+
+.price-section-image-7{
+  background-image: url(../assets/images/svc_b_7.jpg);
+}
+
+.price-section-image-8{
+  background-image: url(../assets/images/svc_b_8.jpg);
+}
+
+.price-section-image-9{
+  background-image: url(../assets/images/svc_b_9.jpg);
+}
+
+div.license{
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 200;
+  padding-top: 15px;
+}
+
+
+.service-section{
+
+  min-height: 70vh;
+  min-width: 80vw;
+  padding: 3% 2%;
+
+  color: rgba(0,0,0, .82);
+  .service-section-container{
+    padding: 0 3vw;
+    background-color: rgba(255,255,255, .8);
+  }
+
+  md-grid-tile{
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+  .price-section-title{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 2vh 0;
+    border-bottom: 3px solid rgba(0,0,0, .8);
+  }
+  .price-section-prices{
+    padding-top: 25px;
+    .price-section-item{
+      padding-bottom: 15px;
+      font-family: Roboto, Helvetica Neue, sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      .main-price{
+        font-weight: 500;
+      }
+      .secondary-price{
+        font-size: 16px;
+        color: rgba(0,0,0, .5);
+        text-align: right;
+      }
+    }
+  }
+}
+
+.price-header{
+  font-family: "Playfair Display", Serif;
+  text-transform: uppercase;
+  color: $accent-color;
+  font-size: 32px;
 }
 
 /**
