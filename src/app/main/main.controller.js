@@ -26,20 +26,20 @@
       $mdDialog.show({
           controller: DialogController,
           controllerAs: 'dialog',
-          template: "<md-dialog>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши цены</span>" +
+          template: "<md-dialog class='gradient-background'>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши цены</span>" +
           "<md-button class='md-icon-button' ng-click='cancel()'><md-icon md-svg-src='assets/images/close.svg'></md-icon></md-button>" +
           "</div></md-toolbar>   <md-dialog-content>        <div layout=\"vertical\" class=\"service-section gradient-background\" id=\"services-section\" layout-fill>  " +
           "<md-grid-list flex layout-fill   " +
           " md-cols-xs=\"1\" md-cols-sm=\"1\" md-cols-md=\"2\" md-cols-gt-md=\"3\"    md-row-height-gt-md=\"1:1\" md-row-height=\"2:2\"    md-gutter=\"12px\" md-gutter-gt-sm=\"8px\" >   " +
           " <md-grid-tile class=\"md-whiteframe-3dp\" ng-repeat=\"serviceCategory in availableService\" ng-class=\"getSectionClass($index)\" \"                 " +
-          " md-rowspan=\"1\" md-colspan=\"1\" md-colspan-sm=\"1\" md-colspan-xs=\"1\" layout=\"column\">      " +
+          " md-rowspan=\"{{serviceCategory.Multiplier}}\" md-colspan=\"1\" md-colspan-sm=\"1\" md-colspan-xs=\"1\" layout=\"column\">      " +
           "<div layout=\"column\" flex layout-fill class=\"service-section-container\">        " +
-          " <div class=\"price-section-title\"><span>{{serviceCategory.name}}</span></div>       " +
+          " <div class=\"price-section-title\">{{serviceCategory.Name}}</div>       " +
           " <div class=\"price-section-prices\" layout=\"column\">          " +
-          "<div class=\"price-section-item\" ng-repeat=\"service in serviceCategory.services\" layout=\"row\" layout-align=\"space-between start\">            " +
-          "<div class=\"price-section-item-name\" >{{service.name}}</div>            <div class=\"price-section-item-price-container\" layout=\"column\" >              " +
-          "<div class=\"main-price\">{{service.price}} {{service.currency}}</div>             " +
-          " <div class=\"secondary-price\">{{service.price}} {{service.currency}}</div>            " +
+          "<div class=\"price-section-item\" ng-repeat=\"service in serviceCategory.Services\" layout=\"row\" layout-align=\"space-between start\">            " +
+          "<div class=\"price-section-item-name\" >{{service.Name}}</div>            <div class=\"price-section-item-price-container\" layout=\"column\" >              " +
+          "<div class=\"main-price\">{{service.Price}} {{service.Currency}}</div>             " +
+          " <div class=\"secondary-price\">{{service.OldPrice}}</div>            " +
           "</div>          </div>        </div>      </div>    </md-grid-tile>  </md-grid-list></div></md-dialog-content>          </form>          </md-dialog>",
           parent: angular.element(document.body),
           targetEvent: ev,
@@ -120,26 +120,45 @@
       vm.classAnimation = '';
     }
 
-    function calculatePrice(price, currency, rates){
+    function calculatePrice(service, rates){
       //USDEUR, EURUAH, USDUAH
 
       var result = {eur:0, usd:0, uah:0};
+      var price = service.Price;
+      var startPrice = service.StartPrice;
+      var endPrice = service.EndPrice;
+      var currency = service.Currency;
+
       if(currency === 'UAH'){
+        if(price.indexOf('-') >0)
+        {
+          return "~"+ Math.floor(startPrice/rates['USDUAH']) + "$/"+Math.floor(startPrice/rates['EURUAH'])+"€ — " + Math.floor(endPrice/rates['USDUAH']) + "$/"+Math.floor(endPrice/rates['EURUAH'])+"€";
+        }
         result.usd = Math.floor(price/rates['USDUAH']);
         result.eur = Math.floor(price/rates['EURUAH']);
+        return "~"+ result.usd + "$/"+result.eur+"€";
         result.uah = price;
       }
       if(currency === 'USD'){
+        if(price.indexOf('-') >0){
+          return "~"+ Math.floor(startPrice*rates['USDUAH']) + "UAH/"+Math.floor(startPrice*rates['USDEUR'])+"€ - "+ Math.floor(endPrice*rates['USDUAH']) + "UAH/"+Math.floor(endPrice*rates['USDEUR'])+"€";
+        }
         result.usd = price;
         result.eur = Math.floor(price*rates['USDEUR']);
         result.uah = Math.floor(price*rates['USDUAH']);
+        return "~"+ result.uah + "UAH/"+result.eur+"€";
       }
       if(currency === 'EUR'){
+        if(price.indexOf('-') >0) {
+          return "~"+ Math.floor(startPrice*rates['EURUAH']) + "UAH/"+Math.floor(startPrice/rates['USDEUR'])+"$ - "+ Math.floor(endPrice*rates['EURUAH']) + "UAH/"+Math.floor(endPrice/rates['USDEUR'])+"$";
+        }
+
         result.usd = Math.floor(price/rates['USDEUR']);
         result.eur = price;
         result.uah = Math.floor(price*rates['EURUAH']);
+        return "~"+ result.uah + "UAH/"+result.usd+"$";
       }
-      return result;
+      return "";
     }
 
     function getWebDevTec() {
@@ -152,13 +171,9 @@
         $http.get("prices.json").then(function(result){
             for(var cIndex in result.data.categories){
               var category = result.data.categories[cIndex];
-              for(var sIndex in category.services){
-                var service = category.services[sIndex];
-                console.log(service.name);
-                var prices = calculatePrice(service.price, service.currency, rates);
-                console.log("USD: " + prices.usd);
-                console.log("EUR: " + prices.eur);
-                console.log("UAH: " + prices.uah);
+              for(var sIndex in category.Services){
+                var service = category.Services[sIndex];
+                category.Services[sIndex].OldPrice = calculatePrice(service, rates);
               }
             }
           vm.services = result.data.categories;

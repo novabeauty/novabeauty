@@ -435,15 +435,15 @@
     <!--md-row-height-gt-md="1:1" md-row-height="2:2"-->
     <!--md-gutter="12px" md-gutter-gt-sm="8px" >-->
     <!--<md-grid-tile class="md-whiteframe-3dp" ng-repeat="serviceCategory in main.services" ng-class="main.getSectionClass($index)" "-->
-                  <!--md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" layout="column">-->
+                  <!--md-rowspan="{{serviceCategory.Multiplier}}" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" layout="column">-->
       <!--<div layout="column" flex layout-fill class="service-section-container">-->
-        <!--<div class="price-section-title"><span>{{serviceCategory.name}}</span></div>-->
+        <!--<div class="price-section-title" layout-align="center center">{{serviceCategory.Name}}</div>-->
         <!--<div class="price-section-prices" layout="column">-->
-          <!--<div class="price-section-item" ng-repeat="service in serviceCategory.services" layout="row" layout-align="space-between start">-->
-            <!--<div class="price-section-item-name" >{{service.name}}</div>-->
+          <!--<div class="price-section-item" ng-repeat="service in serviceCategory.Services" layout="row" layout-align="space-between start">-->
+            <!--<div class="price-section-item-name" >{{service.Name}}</div>-->
             <!--<div class="price-section-item-price-container" layout="column" >-->
-              <!--<div class="main-price">{{service.price}} {{service.currency}}</div>-->
-              <!--<div class="secondary-price">{{service.price}} {{service.currency}}</div>-->
+              <!--<div class="main-price">{{service.Price}} {{service.Currency}}</div>-->
+              <!--<div class="secondary-price">{{service.OldPrice}}</div>-->
             <!--</div>-->
           <!--</div>-->
         <!--</div>-->
