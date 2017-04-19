@@ -90,11 +90,15 @@ html {
   }
 }
 
+.full-height{
+  min-height: 100vh !important;
+}
+
 .left-panel{
   @include breakpoint($screen-mobile){
     display: none !important;
   }
-  min-height: 100vh;
+  min-height: 100%;
   .logo-container{
     min-height: 50vh;
     background-image: url(../assets/images/koltunova.svg);
@@ -340,6 +344,7 @@ html {
   background-color: black;
   margin-left: 45px;
   margin-right: 15px;
+  margin-top: 35px;
 }
 
 .services-list{
@@ -467,6 +472,8 @@ html {
   font-size: 18px;
   color: $accent-color;
   height: 60px;
+  min-height: 60px;
+  max-height: 60px;
   padding-top: 20px;
   text-align: center;
   background-color: rgba(255, 255, 255, .8);
@@ -578,44 +585,22 @@ html {
   background-position: center;
 }
 
-.price-section-image-0{
-  background-image: url(../assets/images/svc_b_0.jpg);
+@mixin price-section-image($imageIndex: null)
+{
+  $className: 'price-section-image-#{$imageIndex}';
+
+  .#{$className}{
+    background-image: url(../assets/images/svc_b_#{$imageIndex}.jpg);
+  }
 }
 
-.price-section-image-1{
-  background-image: url(../assets/images/svc_b_1.jpg);
-}
-.price-section-image-2{
-  background-image: url(../assets/images/svc_b_2.jpg);
-}
-
-.price-section-image-3{
-  background-image: url(../assets/images/svc_b_3.jpg);
+@mixin build-price-section-image(){
+  @for $i from 0 through 50 {
+    @include price-section-image($i);
+  }
 }
 
-.price-section-image-4{
-  background-image: url(../assets/images/svc_b_4.jpg);
-}
-
-.price-section-image-5{
-  background-image: url(../assets/images/svc_b_5.jpg);
-}
-
-.price-section-image-6{
-  background-image: url(../assets/images/svc_b_6.jpg);
-}
-
-.price-section-image-7{
-  background-image: url(../assets/images/svc_b_7.jpg);
-}
-
-.price-section-image-8{
-  background-image: url(../assets/images/svc_b_8.jpg);
-}
-
-.price-section-image-9{
-  background-image: url(../assets/images/svc_b_9.jpg);
-}
+@include  build-price-section-image();
 
 div.license{
   font-family: Roboto, Helvetica Neue, sans-serif;
@@ -681,6 +666,21 @@ div.license{
   text-transform: uppercase;
   color: $accent-color;
   font-size: 32px;
+}
+
+.show-all-price{
+  h3 {
+    color: $accent-color !important;
+    font-family: Roboto, Helvetica Neue, sans-serif !important;
+    md-icon{
+      height: 18px;
+      width: 18px;
+      //margin-left: 10px;
+    }
+    svg {
+      fill: $accent-color;
+    }
+  }
 }
 
 /**
