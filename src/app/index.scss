@@ -270,7 +270,7 @@ html {
 
   font-family: "Playfair Display", sans-serif;
 
-  padding: 32px 36px;
+
   @include breakpoint($screen-mobile){
     padding: 3%;
     .article-content {
@@ -575,6 +575,22 @@ html {
   }
 }
 
+.how-to-get-container {
+  .md-whiteframe-3dp{
+    @include breakpoint($screen-mobile){
+      width: 100%;
+    }
+  }
+  .md-toolbar-tools {
+    span {
+      color: rgba(0,0,0,.82);
+    }
+    md-chips-wrap{
+      box-shadow: 0 0px rgb(224, 224, 224);
+    }
+  }
+}
+
 .mobile-logo-container{
   min-height: 30vh;
   background-color: white;
@@ -681,6 +697,39 @@ div.license{
       fill: $accent-color;
     }
   }
+}
+.koltunova-photo{
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/images/koltunova.png);
+}
+
+.article-item{
+  padding: 32px 36px;
+}
+
+.map-direction-image{
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+}
+.direction-f_l {
+  background-image: url(../assets/images/f_l.jpg);
+}
+.direction-f_d {
+  background-image: url(../assets/images/f_d.jpg);
+}
+
+.direction-c_l {
+  background-image: url(../assets/images/c_l.jpg);
+}
+
+.direction-c_d {
+  background-image: url(../assets/images/c_d.jpg);
 }
 
 /**
