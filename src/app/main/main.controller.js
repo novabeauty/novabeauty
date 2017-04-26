@@ -22,6 +22,37 @@
       return "price-section-image-"+index;
     };
 
+    vm.openDirectionDialog = function(ev){
+      $mdDialog.show(
+        {
+          controller: DirectionController,
+          controllerAs: 'dialog',
+          templateUrl : 'app/main/direction.tmpl.html',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true,
+          fullscreen: true
+        }
+      );
+    };
+
+    function DirectionController($scope, $mdDialog) {
+      $scope.hide = function() {
+        $mdDialog.hide();
+      };
+
+      $scope.cancel = function() {
+        $mdDialog.cancel();
+      };
+
+      $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+      };
+      $scope.getSectionClass = function(index){
+        return "price-section-image-"+index;
+      };
+    }
+
     vm.openPriceDialog = function(ev) {
       $mdDialog.show({
           controller: DialogController,

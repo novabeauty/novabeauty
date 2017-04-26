@@ -6,6 +6,8 @@
 // endbower
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 @import "breakpoint";
 
 $default-color: #EEF3F8;
@@ -18,6 +20,7 @@ $screen-wide: 1440px;
 
 $screen-mobile: 0 1024px;
 $screen-desktop: 960px;
+$body-font-family: 'Open Sans', sans-serif;
 
 @font-face {
   font-family: 'Material Icons';
@@ -61,7 +64,7 @@ md-dialog{
 
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: $body-font-family;
 }
 
 [layout=row] {
@@ -116,7 +119,7 @@ html {
       padding-left: 15%;
 
       p{
-        font-family: "Roboto Condensed", Serif;
+        font-family: $body-font-family;
         font-size: 18px;
       }
     }
@@ -285,10 +288,10 @@ html {
     color: $accent-color;
   }
   .article-content{
-    font-family: Roboto, sans-serif;
+    font-family: $body-font-family;
     font-size: 18px;
-    line-height: 24px;
-    color: black;
+    color: #1F1F26;
+    line-height: 1.7;
 
     @include breakpoint($screen-mobile){
       -moz-column-count: 1;
@@ -354,7 +357,7 @@ html {
       font-size: 18px !important;
     }
     p{
-      font-family: Roboto, sans-serif;
+      font-family: $body-font-family;
       font-size: 12px !important;;
       font-weight: 200 !important;;
     }
@@ -468,7 +471,7 @@ html {
 }
 
 .service-alarm-price{
-  font-family: 'Roboto Slab', serif;
+  font-family: $body-font-family;
   font-size: 18px;
   color: $accent-color;
   height: 60px;
@@ -513,7 +516,7 @@ html {
 .contacts{
   padding-top: 50px;
   align-self: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: $body-font-family;
   font-size: 24px;
   opacity: .6;
   span{
@@ -556,7 +559,7 @@ html {
     text-align: center;
   }
   .working-hours-when{
-    font-family: 'Roboto Slab', serif;
+    font-family: $body-font-family;
     font-size: 14px;
     line-height: 19px;
     p{
@@ -619,11 +622,18 @@ html {
 @include  build-price-section-image();
 
 div.license{
-  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-family: $body-font-family;
   font-size: 14px;
   text-align: center;
   font-weight: 200;
   padding-top: 15px;
+}
+
+div.partners{
+  font-family: $body-font-family;
+  font-size: 18px;
+  font-weight: 200;
+  opacity: .6;
 }
 
 
@@ -661,7 +671,7 @@ div.license{
     padding-top: 25px;
     .price-section-item{
       padding-bottom: 15px;
-      font-family: Roboto, Helvetica Neue, sans-serif;
+      font-family: $body-font-family;
       font-size: 16px;
       font-weight: 200;
       .main-price{
@@ -687,7 +697,7 @@ div.license{
 .show-all-price{
   h3 {
     color: $accent-color !important;
-    font-family: Roboto, Helvetica Neue, sans-serif !important;
+    font-family: $body-font-family !important;
     md-icon{
       height: 18px;
       width: 18px;
@@ -730,6 +740,30 @@ div.license{
 
 .direction-c_d {
   background-image: url(../assets/images/c_d.jpg);
+}
+
+.how-to-get-container{
+  min-width: 80vw;
+}
+
+.direction-link{
+  padding-top: 3vh;
+  font-family: "Playfair Display", sans-serif;
+  color: $accent-color;
+  span{
+    font-size: 18px;
+    color: $accent-color;
+  }
+
+  md-icon{
+    height: 18px;
+    width: 18px;
+    margin-top: -7px;
+    //margin-left: 10px;
+  }
+  svg {
+    fill: $accent-color;
+  }
 }
 
 /**

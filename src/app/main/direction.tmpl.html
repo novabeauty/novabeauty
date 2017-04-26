@@ -1,0 +1,75 @@
+<md-dialog aria-label="How To" id="directionDialog">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Как к на добраться</h2>
+        <span flex></span>
+        <md-button class='md-icon-button' ng-click='cancel()'><md-icon md-svg-src='assets/images/close.svg'></md-icon></md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <md-tabs md-dynamic-height md-border-bottom md-center-tabs layout-fill>
+        <md-tab id="byCar">
+          <md-tab-label><md-icon md-svg-icon="assets/images/car.svg"></md-icon> на автомобиле</md-tab-label>
+          <md-tab-body>
+            <div layout-gt-lg="row" layout-xs="column" layout-sm="column" layout-md="column" layout-align="center start" class="md-padding how-to-get-container">
+              <md-whiteframe class="md-whiteframe-3dp no-background md-margin" flex >
+                <md-toolbar>
+                  <div class="md-toolbar-tools" layout-align="center center">
+                    <span>м. Лыбедская</span>
+                  </div>
+                </md-toolbar>
+                <md-content>
+                  <div flex class="map-direction-image direction-c_l">&nbsp;</div>
+                </md-content>
+              </md-whiteframe>
+              <md-whiteframe class="md-whiteframe-3dp no-background md-margin" flex >
+                <md-toolbar>
+                  <div class="md-toolbar-tools" layout-align="center center">
+                    <span>м. Дружбы Народов</span>
+                  </div>
+                </md-toolbar>
+                <md-content>
+                  <div flex class="map-direction-image direction-c_d">&nbsp;</div>
+                </md-content>
+              </md-whiteframe>
+            </div>
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="foot">
+          <md-tab-label><md-icon md-svg-icon="assets/images/walk.svg"></md-icon> Пешком</md-tab-label>
+          <md-tab-body>
+            <div layout-gt-lg="row" layout-xs="column" layout-sm="column" layout-md="column" layout-align="center start" class="md-padding how-to-get-container" >
+              <md-whiteframe class="md-whiteframe-3dp no-background md-margin" flex >
+                <md-toolbar>
+                  <div class="md-toolbar-tools" layout-align="center center">
+                    <span>м. Лыбедская</span>
+                    <md-chips md-removable="false">
+                      <md-chip>13 минут</md-chip>
+                    </md-chips>
+                  </div>
+                </md-toolbar>
+                <md-content>
+                  <div flex class="map-direction-image direction-f_l">&nbsp;</div>
+                </md-content>
+              </md-whiteframe>
+              <md-whiteframe class="md-whiteframe-3dp no-background md-margin" flex >
+                <md-toolbar>
+                  <div class="md-toolbar-tools" layout-align="center center">
+                    <span>м. Дружбы Народов</span>
+                    <md-chips md-removable="false">
+                      <md-chip>9 минут</md-chip>
+                    </md-chips>
+                  </div>
+                </md-toolbar>
+                <md-content>
+                  <div flex class="map-direction-image direction-f_d">&nbsp;</div>
+                </md-content>
+              </md-whiteframe>
+            </div>
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+  </form>
+</md-dialog>
