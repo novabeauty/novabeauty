@@ -422,7 +422,12 @@ html {
   &:hover{
     cursor: pointer;
     .service-alarm-title{
-      color: white;
+      background-color: rgba(255, 255, 255, .5);
+
+      &.white{
+        color: white;
+        background-color: rgba(0, 0, 0, .5);
+      }
     }
   }
 }
@@ -492,7 +497,7 @@ html {
   font-family: "Playfair Display", sans-serif;
   font-weight: 500;
   font-size: 30px;
-  padding: 15% 25px 0 25px;
+  margin: 15% 25px 0 25px;
   text-align: center;
   @include breakpoint($screen-mobile){
     font-size: 18px;
