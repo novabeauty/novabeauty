@@ -166,14 +166,14 @@
       ]
     },
     {
-      "Name": "Контурная пластика (Иньекции препаратами Princess)",
+      "Name": "Контурная пластика",
       "Description": "",
       "Multiplier": 1,
       "Services": [
         {
-          "Name": "Princess филер",
-          "Price": "220",
-          "OldPrice": "",
+          "Name": "Auralya",
+          "Price": "160",
+          "OldPrice": "220",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -181,17 +181,17 @@
         },
         {
           "Name": "Princess филер с лидокаином",
-          "Price": "230",
-          "OldPrice": "",
+          "Price": "180",
+          "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
-          "Description": "",
+          "Description": " ",
           "Currency": "EUR"
         },
         {
-          "Name": "Princess Volume",
-          "Price": "240",
-          "OldPrice": "",
+          "Name": "Plenhyage",
+          "Price": "170",
+          "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -199,8 +199,8 @@
         },
         {
           "Name": "Princess Volume с лидокаином",
-          "Price": "250",
-          "OldPrice": "",
+          "Price": "195",
+          "OldPrice": "240",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "Name": "Контурная пластика  (Иньекции препаратами Ювидерм)",
+      "Name": "Контурная пластика (Иньекции препаратами Ювидерм)",
       "Description": "",
       "Multiplier": 1,
       "Services": [
@@ -285,7 +285,7 @@
       "Services": [
         {
           "Name": "Teosуal RHA I",
-          "Price": "280",
+          "Price": "260",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -294,7 +294,7 @@
         },
         {
           "Name": "Teosуal RHA II",
-          "Price": "280",
+          "Price": "270",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -311,7 +311,7 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Teosуal Ruresens Redeutisy II",
+          "Name": "Teosуal  Redeutisy II",
           "Price": "280",
           "OldPrice": "",
           "StartPrice": "",
@@ -336,7 +336,7 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Radies 1,25 ml",
+          "Name": "Radies 1,5 ml",
           "Price": "390",
           "OldPrice": "",
           "StartPrice": "",
@@ -345,7 +345,7 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Luminere 1,25 ml",
+          "Name": "Luminera",
           "Price": "270",
           "OldPrice": "",
           "StartPrice": "",
@@ -432,8 +432,8 @@
         },
         {
           "Name": "Princess rich 1,0 ml",
-          "Price": "140",
-          "OldPrice": "",
+          "Price": "97",
+          "OldPrice": "130",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -459,7 +459,7 @@
         },
         {
           "Name": "Hyalift 35 5,0 ml",
-          "Price": "7 0",
+          "Price": "85",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -626,7 +626,7 @@
       "Services": [
         {
           "Name": "Пилинг поверхностный с фруктовыми кислотами",
-          "Price": "1180",
+          "Price": "840",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -635,7 +635,7 @@
         },
         {
           "Name": "Пилинг поверхностный отбеливающий антикуперозный ",
-          "Price": "1380",
+          "Price": "1160",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -644,7 +644,7 @@
         },
         {
           "Name": "Пилинг осветляющий комбинированный",
-          "Price": "920",
+          "Price": "870",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -662,7 +662,7 @@
         },
         {
           "Name": "Пилинг поверхностный срединный ретиноевый",
-          "Price": "1280",
+          "Price": "890",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -723,7 +723,7 @@
       "Services": [
         {
           "Name": "Пилинг энзимный",
-          "Price": "890",
+          "Price": "690",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -741,10 +741,10 @@
         },
         {
           "Name": "Криопилинг",
-          "Price": "890 - 1280",
+          "Price": "790",
           "OldPrice": "",
-          "StartPrice": "890 ",
-          "EndPrice": " 1280",
+          "StartPrice": "",
+          "EndPrice": "",
           "Description": "",
           "Currency": "UAH"
         },
@@ -768,7 +768,7 @@
         },
         {
           "Name": "Пилинг с факторами роста",
-          "Price": "1460",
+          "Price": "1260",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -801,17 +801,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Комбинированная ( атравматическая+ механическая чистка)",
-          "Price": "1180",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
           "Name": "Чистка дермомагнитная",
-          "Price": "1250",
+          "Price": "970",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -862,15 +853,6 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Хиромассаж",
-          "Price": "350-550",
-          "OldPrice": "",
-          "StartPrice": "350",
-          "EndPrice": "550",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
           "Name": "Глубокое увлажнение (Yvette)",
           "Price": "1160",
           "OldPrice": "",
@@ -898,7 +880,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Увлажнение + лифтинг",
+          "Name": "Увлажнение + лифтинг на аппарате дуолифт эксперт",
           "Price": "870",
           "OldPrice": "",
           "StartPrice": "",
@@ -907,7 +889,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Глубокое увлажнение + лифтинг ( с морским коллагеном)",
+          "Name": "Глубокое увлажнение + лифтинг ( с морским коллагеном) на аппарате дуолифт эксперт",
           "Price": "980",
           "OldPrice": "",
           "StartPrice": "",
@@ -1480,7 +1462,7 @@
       "Services": [
         {
           "Name": "Бикини (глубокое)",
-          "Price": "600",
+          "Price": "580",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1489,7 +1471,7 @@
         },
         {
           "Name": "Бикини (неглубокое )",
-          "Price": "450",
+          "Price": "410",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1516,7 +1498,7 @@
         },
         {
           "Name": "Голени",
-          "Price": "250",
+          "Price": "230",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1525,7 +1507,7 @@
         },
         {
           "Name": "Руки полностью",
-          "Price": "300",
+          "Price": "270",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1534,7 +1516,7 @@
         },
         {
           "Name": "Подмышки",
-          "Price": "200",
+          "Price": "190",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
