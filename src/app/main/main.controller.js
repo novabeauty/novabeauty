@@ -41,6 +41,7 @@
       $scope.showOther = function(){
         $('.article-continue').toggleClass('hide');
         $('.article-continue').toggleClass('slideInDown');
+        $('#aboutKoltunova').toggleClass('increase-width')
 
         $('#readAll').hide();
       };

@@ -46,6 +46,10 @@ md-toolbar{
 md-dialog{
   background-color: #f0f2f6;
 }
+.animate-dialog{
+  -webkit-transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
+}
 
 .only-mobile{
   background-color: #f2f2f2 !important;
@@ -895,7 +899,10 @@ div.partners{
   }
 }
 #aboutKoltunova{
-  max-width: 60vw !important;
+  max-width: 60vw;
+}
+.increase-width{
+  max-width: 90vw !important
 }
 
 /**
