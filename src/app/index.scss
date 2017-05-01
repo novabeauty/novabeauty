@@ -62,6 +62,11 @@ md-dialog{
 
 }
 
+.article-continue{
+  -webkit-transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 
 
 html {
@@ -274,38 +279,132 @@ html {
 
   font-family: "Playfair Display", sans-serif;
 
+  .article-item{
+    order: 1;
+  }
+  .koltunova-photo{
+    order: 2;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
 
   @include breakpoint($screen-mobile){
-    padding: 3%;
-    .article-content {
-      -moz-column-count: 1;
-      -webkit-column-count: 1;
-      column-count: 1;
+
+    .article-item{
+      order: 2;
     }
+    .koltunova-photo{
+      order: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      max-width: 100%;
+    }
+
+    padding: 0;
+    min-height: 180vh !important;
   }
 
   .article-title {
     font-size: 24px;
     color: $accent-color;
   }
-  .article-content{
-    font-family: $body-font-family;
-    font-size: 18px;
-    color: #1F1F26;
-    line-height: 1.7;
 
-    @include breakpoint($screen-mobile){
-      -moz-column-count: 1;
-      -webkit-column-count: 1;
-      column-count: 1;
-      font-size: 16px;
-      line-height: 24px;
-
-    }
-  }
+}
+.hide{
+  height: 0;
+}
+.text-center{
+  text-align: center;
+  color: $accent-color;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 24px;
 }
 
-.services-icon{
+.article-content{
+  font-family: $body-font-family;
+  font-size: 18px;
+  color: #1F1F26;
+  line-height: 1.8;
+  a{
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border-bottom: 1px dashed black;
+    &:hover{
+      color: $accent-color;
+      border-bottom: 1px dashed $accent-color;
+      cursor: pointer;
+    }
+  }
+
+  &.article-padding{
+    padding: 0px 2vw;
+    font-size: 18px;
+  }
+
+  @include breakpoint($screen-mobile){
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+    font-size: 16px;
+    line-height: 24px;
+
+  }
+}
+.article-container{
+  .avatar{
+    height: 40vw;
+    width: 40vw;
+    display: none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/koltunova_portrait.png);
+    @include breakpoint($screen-mobile){
+      margin-left: 30vw;
+      display: block;
+    }
+  }
+  .article-content{
+    order: 1;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  .koltunova-portrait{
+    order: 2;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
+    max-height: 100%;
+  }
+  @include breakpoint($screen-mobile){
+    .article-content{
+      order: 2;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      max-width: 100%;
+    }
+    .koltunova-portrait{
+      order: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+}
+
+  .services-icon{
   width: 50px;
   height: 50px;
   background-color: $accent-color;
@@ -352,10 +451,23 @@ html {
 }
 
 .services-list{
+  md-list-item.md-no-proxy{
+    @include breakpoint($screen-mobile){
+      padding: 0 !important;
+    }
+
+  }
   .md-list-item-text{
     h3{
       font-family: "Playfair Display", sans-serif;
       font-size: 18px !important;
+      @include breakpoint($screen-mobile){
+        font-size: 12px !important;
+        width: 80vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
     p{
       font-family: $body-font-family;
@@ -722,6 +834,17 @@ div.partners{
   background-image: url(../assets/images/koltunova.png);
 }
 
+.koltunova-portrait{
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/images/koltunova_portrait.png);
+  @include breakpoint($screen-mobile){
+    background-image: none;
+  }
+}
+
 .article-item{
   padding: 32px 36px;
 }
@@ -770,6 +893,9 @@ div.partners{
   svg {
     fill: $accent-color;
   }
+}
+#aboutKoltunova{
+  max-width: 60vw !important;
 }
 
 /**

@@ -95,9 +95,9 @@
     </div>
   </div>
   <div layout="column" flex layout-fill class="about-section">
-    <div class="koltunova-about gradient-background wow fadeIn" data-wow-duration="1s" layout="row">
-      <div flex="50" class="article-item" layout="column">
-        <div class="article-title wow zoomIn" data-wow-duration="1s">Приветствую вас в нашей клинике! </div>
+    <div class="koltunova-about gradient-background wow fadeIn" data-wow-duration="1s" layout-gt-md="row" layout-xs="column" layout-sm="column" layout-md="column" >
+      <div flex class="article-item" layout="column">
+        <div class="article-title wow zoomIn" data-wow-duration="1s">Приветствую Вас в нашей клинике! </div>
         <div class="article-content  wow zoomIn" data-wow-duration="1s">
           <p>
             Вот уже более 25 лет, я помогаю большому количеству мужчин, женщин и детей быть счастливыми, делая их здоровее и моложе. Мои пациенты смогли обрести красоту, уверенность в себе, гармонию и свободу при помощи новейших технологий эстетической медицины, моего опыта, и команды Nova Beauty.
@@ -110,12 +110,11 @@
           <p>
             <br>
             С Уважением,<br>
-            Наталья Борисовна Колтунова,<br>
-            Врач Высшей Категории
+            <a ng-click="main.openAboutDialog($event)">Наталья Борисовна Колтунова</a>
           </p>
         </div>
       </div>
-      <div flex="50" class="koltunova-photo">&nbsp;</div>
+      <div class="koltunova-photo">&nbsp;</div>
     </div>
     <div class="koltunova-tour" layout="column" ng-click="main.openTour()">
       <div class="section-icon rectangle-45" layout="column" layout-align="center center">
@@ -149,41 +148,42 @@
               <md-list-item class="md-primary md-2-line" layout="row">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
-                  <h3>Инъекции ботокса</h3>
-                  <p>от 40$ до 180$</p>
+                  <h3>ИНЪЕКЦИИ  КСЕОМИН(ботулоксин,Мерц Эстетикс,Германия)</h3>
+                  <p>Естественный результат! 1 зона-120 долл</p>
                 </div>
               </md-list-item>
               <md-list-item class="md-primary md-2-line" layout="row">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
-                  <h3>Плазмотерапия</h3>
-                  <p>от 40€ до 220€</p>
+                  <h3>ПЛАЗМОТЕРАПИЯ(обогащенная тромбоцитами)</h3>
+                  <p>в/ч головы-2500 гр,
+                    лицо-3200 гр,
+                    лицо+шея+декольте-3900 гр</p>
                 </div>
               </md-list-item>
               <md-list-item class="md-primary md-2-line" layout="row">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
-                  <h3>Контурная пластика губы</h3>
-                  <p>от 70€ до 280€</p>
+                  <h3>БИОРЕМОДЕЛИРОВАНИЕ</h3>
+                  <p>Всего 5 биологически активных точек на каждой стороне лица!
+                    Эффект-мгновенное увлажнение и лифтинг!
+                    Profhilo 2,0 мл-260 евро</p>
                 </div>
               </md-list-item>
               <md-list-item class="md-primary md-2-line" layout="row">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
-                  <h3>Омоложение кистей</h3>
+                  <h3>УВЕЛИЧЕНИЕ ГУБ 3D ЭФФЕКТ от 1,5 года!!!</h3>
+                  <p>Ювидерм Volift 1,0 ml-290 евро</p>
                 </div>
               </md-list-item>
               <md-list-item class="md-primary md-2-line" layout="row">
                 <div class="bullet">&nbsp;</div>
                 <div class="md-list-item-text">
-                  <h3>Биоревитализация</h3>
-                  <p>от 32€ до 180€</p>
-                </div>
-              </md-list-item>
-              <md-list-item class="md-primary md-2-line" layout="row">
-                <div class="bullet">&nbsp;</div>
-                <div class="md-list-item-text">
-                  <h3>Авторская методика "Минус 10 лет за 60 минут"</h3>
+                  <h3>Биоревитализация пептидами!</h3>
+                  <p>Сияние и оздоровление кожи!   Результат после 1-й процедуры!Курс-от 3 процедур!
+                    Мезовартон/мезоксантин-
+                    1,5 мл-200 долл</p>
                 </div>
               </md-list-item>
               <md-list-item ng-click="main.openPriceDialog()" class="md-primary md-2-line show-all-price">

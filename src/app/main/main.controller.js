@@ -22,6 +22,38 @@
       return "price-section-image-"+index;
     };
 
+    vm.openAboutDialog = function(ev){
+      $mdDialog.show({
+        controller: AboutKoltunovaController,
+        controllerAs: 'dialog',
+        templateUrl : 'app/main/koltunova.tmpl.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        fullscreen: true
+      });
+    };
+
+    function AboutKoltunovaController($scope, $mdDialog) {
+      $scope.hide = function() {
+        $mdDialog.hide();
+      };
+      $scope.showOther = function(){
+        $('.article-continue').toggleClass('hide');
+        $('.article-continue').toggleClass('slideInDown');
+
+        $('#readAll').hide();
+      };
+
+      $scope.cancel = function() {
+        $mdDialog.cancel();
+      };
+
+      $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+      };
+    }
+
     vm.openDirectionDialog = function(ev){
       $mdDialog.show(
         {
@@ -57,7 +89,7 @@
       $mdDialog.show({
           controller: DialogController,
           controllerAs: 'dialog',
-          template: "<md-dialog class='gradient-background'>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши цены</span>" +
+          template: "<md-dialog class='gradient-background'>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши ценьі</span>" +
           "<md-button class='md-icon-button' ng-click='cancel()'><md-icon md-svg-src='assets/images/close.svg'></md-icon></md-button>" +
           "</div></md-toolbar>   <md-dialog-content>        <div layout=\"vertical\" class=\"service-section gradient-background\" id=\"services-section\" layout-fill>  " +
           "<md-grid-list flex layout-fill   " +
