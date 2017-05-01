@@ -101,8 +101,7 @@
           " <div class=\"price-section-prices\" layout=\"column\">          " +
           "<div class=\"price-section-item\" ng-repeat=\"service in serviceCategory.Services\" layout=\"row\" layout-align=\"space-between start\">            " +
           "<div class=\"price-section-item-name\" >{{service.Name}}</div>            <div class=\"price-section-item-price-container\" layout=\"column\" >              " +
-          "<div class=\"main-price\">{{service.Price}} {{service.Currency}}</div>             " +
-          " <div class=\"secondary-price\">{{service.OldPrice}}</div>            " +
+          "<div class=\"main-price\"><span style='text-decoration: line-through; font-weight: 100;'>{{service.OldPrice}}</span> {{service.Price}} {{service.Currency}}</div>             " +
           "</div>          </div>        </div>      </div>    </md-grid-tile>  </md-grid-list></div></md-dialog-content>          </form>          </md-dialog>",
           parent: angular.element(document.body),
           targetEvent: ev,
@@ -140,9 +139,16 @@
 
     var tourURL = 'https://youtu.be/NLBGd0gXvD8';
 
-    vm.openTour = function(){
-      var win = window.open(tourURL, '_blank');
-      win.focus();
+    vm.openTour = function(ev){
+      $mdDialog.show(
+      $mdDialog.alert()
+        .parent(angular.element(document.body))
+        .clickOutsideToClose(true)
+        .title('В данный момент эта функция не доступна')
+        .textContent('Мы работаем над виртуальным туром и он будет доступен в ближайшее время')
+        .ariaLabel('Виртуальный')
+        .ok('Продолжить')
+        .targetEvent(ev));
     };
 
 
@@ -232,13 +238,13 @@
           rates[obj.id] = obj.Rate;
         }
         $http.get("prices.json").then(function(result){
-            for(var cIndex in result.data.categories){
-              var category = result.data.categories[cIndex];
-              for(var sIndex in category.Services){
-                var service = category.Services[sIndex];
-                category.Services[sIndex].OldPrice = calculatePrice(service, rates);
-              }
-            }
+            //for(var cIndex in result.data.categories){
+            //  var category = result.data.categories[cIndex];
+            //  for(var sIndex in category.Services){
+            //    var service = category.Services[sIndex];
+            //    category.Services[sIndex].OldPrice = calculatePrice(service, rates);
+            //  }
+            //}
           vm.services = result.data.categories;
         }, function(){console.log("failed");});
       });
