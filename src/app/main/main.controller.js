@@ -40,7 +40,7 @@
       };
       $scope.showOther = function(){
         $('.article-continue').toggleClass('hide');
-        $('.article-continue').toggleClass('slideInDown');
+        $('.article-continue').toggleClass('fadeInDown');
         $('#aboutKoltunova').toggleClass('increase-width')
 
         $('#readAll').hide();
@@ -90,20 +90,7 @@
       $mdDialog.show({
           controller: DialogController,
           controllerAs: 'dialog',
-          template: "<md-dialog class='gradient-background'>          <form ng-cloak> <md-toolbar><div class='md-toolbar-tools'><h2></h2><span class='price-header' flex>Наши ценьі</span>" +
-          "<md-button class='md-icon-button' ng-click='cancel()'><md-icon md-svg-src='assets/images/close.svg'></md-icon></md-button>" +
-          "</div></md-toolbar>   <md-dialog-content>        <div layout=\"vertical\" class=\"service-section gradient-background\" id=\"services-section\" layout-fill>  " +
-          "<md-grid-list flex layout-fill   " +
-          " md-cols-xs=\"1\" md-cols-sm=\"1\" md-cols-md=\"2\" md-cols-gt-md=\"3\"    md-row-height-gt-md=\"1:1\" md-row-height=\"2:2\"    md-gutter=\"12px\" md-gutter-gt-sm=\"8px\" >   " +
-          " <md-grid-tile class=\"md-whiteframe-3dp\" ng-repeat=\"serviceCategory in availableService\" ng-class=\"getSectionClass($index)\" \"                 " +
-          " md-rowspan=\"{{serviceCategory.Multiplier}}\" md-colspan=\"1\" md-colspan-sm=\"1\" md-colspan-xs=\"1\" layout=\"column\">      " +
-          "<div layout=\"column\" flex layout-fill class=\"service-section-container\">        " +
-          " <div class=\"price-section-title\">{{serviceCategory.Name}}</div>       " +
-          " <div class=\"price-section-prices\" layout=\"column\">          " +
-          "<div class=\"price-section-item\" ng-repeat=\"service in serviceCategory.Services\" layout=\"row\" layout-align=\"space-between start\">            " +
-          "<div class=\"price-section-item-name\" >{{service.Name}}</div>            <div class=\"price-section-item-price-container\" layout=\"column\" >              " +
-          "<div class=\"main-price\"><span style='text-decoration: line-through; font-weight: 100;'>{{service.OldPrice}}</span> {{service.Price}} {{service.Currency}}</div>             " +
-          "</div>          </div>        </div>      </div>    </md-grid-tile>  </md-grid-list></div></md-dialog-content>          </form>          </md-dialog>",
+          templateUrl: "app/main/price.tmpl.html",
           parent: angular.element(document.body),
           targetEvent: ev,
           locals :{items : vm.services},
@@ -232,22 +219,23 @@
     }
 
     function getWebDevTec() {
+      $http.get("prices.json").then(function(result){
+        //for(var cIndex in result.data.categories){
+        //  var category = result.data.categories[cIndex];
+        //  for(var sIndex in category.Services){
+        //    var service = category.Services[sIndex];
+        //    category.Services[sIndex].OldPrice = calculatePrice(service, rates);
+        //  }
+        //}
+        vm.services = result.data.categories;
+      }, function(){console.log("failed");});
       $http.get(exchangeApi).then(function(result)
       {
         for(var index in result.data.query.results.rate){
           var obj = result.data.query.results.rate[index];
           rates[obj.id] = obj.Rate;
         }
-        $http.get("prices.json").then(function(result){
-            //for(var cIndex in result.data.categories){
-            //  var category = result.data.categories[cIndex];
-            //  for(var sIndex in category.Services){
-            //    var service = category.Services[sIndex];
-            //    category.Services[sIndex].OldPrice = calculatePrice(service, rates);
-            //  }
-            //}
-          vm.services = result.data.categories;
-        }, function(){console.log("failed");});
+
       });
     }
   }

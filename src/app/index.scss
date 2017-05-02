@@ -43,6 +43,12 @@ md-toolbar{
   }
 }
 
+.gold-button{
+  span{
+    color: $accent-color !important;
+  }
+}
+
 md-dialog{
   background-color: #f0f2f6;
 }
@@ -67,8 +73,7 @@ md-dialog{
 }
 
 .article-continue{
-  -webkit-transition: all 1s ease-in-out;
-  transition: all .5s ease-in-out;
+
 }
 
 
@@ -306,9 +311,7 @@ html {
       flex: 1;
       max-width: 100%;
     }
-
     padding: 0;
-    min-height: 180vh !important;
   }
 
   .article-title {
@@ -318,7 +321,7 @@ html {
 
 }
 .hide{
-  height: 0;
+  display: none;
 }
 .text-center{
   text-align: center;
@@ -357,22 +360,38 @@ html {
 
   }
 }
+.avatar{
+  height: 40vw;
+  width: 40vw;
+  display: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/images/avatar.png);
+  @include breakpoint($screen-mobile){
+    margin-left: 30vw;
+    display: block;
+  }
+}
+
 .article-container{
   .avatar{
-    height: 40vw;
-    width: 40vw;
+    margin-top: -20px;
+  }
+  .mobile-title{
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    padding: 45px 0 10px 0;
     display: none;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../assets/images/koltunova_portrait.png);
+    color: $accent-color;
     @include breakpoint($screen-mobile){
-      margin-left: 30vw;
       display: block;
     }
   }
+
   .article-content{
     order: 1;
     -webkit-flex: 1 1 50%;
@@ -836,6 +855,10 @@ div.partners{
   background-size: cover;
   background-position: center;
   background-image: url(../assets/images/koltunova.png);
+  @include breakpoint($screen-mobile){
+    background-image: none;
+    max-height: 40vw;
+  }
 }
 
 .koltunova-portrait{
@@ -900,9 +923,18 @@ div.partners{
 }
 #aboutKoltunova{
   max-width: 60vw;
+  @include breakpoint($screen-mobile){
+    .text-center{
+      visibility: hidden;
+    }
+  }
 }
 .increase-width{
   max-width: 90vw !important
+}
+.disclaimer{
+  font-weight: 500;
+  color: $accent-color;
 }
 
 /**
