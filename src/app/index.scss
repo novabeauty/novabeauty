@@ -861,7 +861,7 @@ div.partners{
   background-position: center;
   background-image: url(../assets/images/koltunova.png);
   @include breakpoint($screen-mobile){
-    max-height: 50vh;
+    min-height: 50vh;
   }
 }
 
