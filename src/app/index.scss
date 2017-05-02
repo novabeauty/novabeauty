@@ -58,6 +58,10 @@ md-dialog{
 }
 
 .only-mobile{
+  display: none;
+  @include breakpoint($screen-mobile){
+    display: block;
+  }
   background-color: #f2f2f2 !important;
   .md-icon-button{
 
