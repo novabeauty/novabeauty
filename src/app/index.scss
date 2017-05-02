@@ -304,6 +304,7 @@ html {
   }
 
   @include breakpoint($screen-mobile){
+    min-height: 140vh;
 
     .article-item{
       order: 2;
@@ -860,8 +861,7 @@ div.partners{
   background-position: center;
   background-image: url(../assets/images/koltunova.png);
   @include breakpoint($screen-mobile){
-    background-image: none;
-    max-height: 40vw;
+    max-height: 50vh;
   }
 }
 
