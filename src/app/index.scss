@@ -304,7 +304,7 @@ html {
   }
 
   @include breakpoint($screen-mobile){
-    min-height: 140vh;
+    min-height: 180vh;
 
     .article-item{
       order: 2;
@@ -466,6 +466,34 @@ html {
   .section-circle{
     margin-top: 10px;
     margin-left: 35px;
+    @include breakpoint($screen-mobile){
+      margin-left: 5%;
+    }
+  }
+}
+.services-list{
+  h3{
+    text-transform: uppercase;
+  }
+  .md-list-item-text{
+    padding-top: 25px;
+  }
+  @include breakpoint($screen-mobile){
+    .bullet{
+      display: none;
+    }
+    .md-list-item-text{
+      padding-left: 5%;
+    }
+    h3{
+      font-size: 15px !important;
+    }
+    .section-circle{
+      margin-left: 5% !important;
+    }
+    .md-button{
+      padding:0;
+    }
   }
 }
 .bullet{
@@ -490,11 +518,12 @@ html {
       font-family: "Playfair Display", sans-serif;
       font-size: 18px !important;
       @include breakpoint($screen-mobile){
-        font-size: 12px !important;
+        font-size: 15px !important;
         width: 80vw;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-top: 15px;
       }
     }
     p{

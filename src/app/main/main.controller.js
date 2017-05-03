@@ -22,6 +22,10 @@
       return "price-section-image-"+index;
     };
 
+    vm.callNB = function(){
+      window.location.href="tel://+380675076085";
+    };
+
     vm.openAboutDialog = function(ev){
       $mdDialog.show({
         controller: AboutKoltunovaController,
