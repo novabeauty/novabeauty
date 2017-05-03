@@ -44,9 +44,9 @@
       ]
     },
     {
-      "Name": "Ботулинотерапия (ботокс, ботулакс, диспорт, ксеомин)",
+      "Name": "Ботулинотерапия (ботокс, ботулакс, диспорт,ксеомин)",
       "Description": "",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Горизонтальные морщины лба",
@@ -58,7 +58,7 @@
           "Currency": "USD"
         },
         {
-          "Name": "Зона межбровье",
+          "Name": "Зона межбровья",
           "Price": "75-150",
           "OldPrice": "",
           "StartPrice": "75",
@@ -137,7 +137,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Плазмотерапия (обогащенная тромбоцитами)",
+          "Name": "Плазмотерапия (обогащенная тромбоцитами) 1 зона",
           "Price": "2500",
           "OldPrice": "",
           "StartPrice": "",
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "Name": "Контурная пластика",
+      "Name": "Контурная пластика ",
       "Description": "",
       "Multiplier": 1,
       "Services": [
@@ -180,8 +180,8 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Princess филер с лидокаином",
-          "Price": "180",
+          "Name": "Plenhyage",
+          "Price": "170",
           "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
@@ -189,8 +189,8 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Plenhyage",
-          "Price": "170",
+          "Name": "Princess филер с лидокаином",
+          "Price": "180",
           "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
@@ -336,8 +336,8 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Radies 1,5 ml",
-          "Price": "390",
+          "Name": "Radies ,1,5 ml",
+          "Price": "370",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -345,7 +345,7 @@
           "Currency": "EUR"
         },
         {
-          "Name": "Luminera",
+          "Name": " Luminera",
           "Price": "270",
           "OldPrice": "",
           "StartPrice": "",
@@ -371,8 +371,8 @@
       "Services": [
         {
           "Name": "MesoWarton P199",
-          "Price": "230",
-          "OldPrice": "",
+          "Price": "200",
+          "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -380,8 +380,8 @@
         },
         {
           "Name": "MesoWarton мезоксантин",
-          "Price": "230",
-          "OldPrice": "",
+          "Price": "200",
+          "OldPrice": "230",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -389,8 +389,8 @@
         },
         {
           "Name": "MesoWarton мезоай",
-          "Price": "210",
-          "OldPrice": "",
+          "Price": "185",
+          "OldPrice": "210",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -398,8 +398,8 @@
         },
         {
           "Name": "MesoWarton мезоскульпт",
-          "Price": "210",
-          "OldPrice": "",
+          "Price": "185",
+          "OldPrice": "210",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -463,7 +463,7 @@
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
-          "Description": "",
+          "Description": "  ",
           "Currency": "EUR"
         },
         {
@@ -486,8 +486,8 @@
         },
         {
           "Name": "Fat apaptosis 50,0 ml",
-          "Price": "145",
-          "OldPrice": "",
+          "Price": "130",
+          "OldPrice": "145",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -495,8 +495,8 @@
         },
         {
           "Name": "Fat apaptosis 20,0 ml",
-          "Price": "75",
-          "OldPrice": "",
+          "Price": "70",
+          "OldPrice": "85",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -522,8 +522,8 @@
         },
         {
           "Name": "RRS yeas 1,5 ml",
-          "Price": "32",
-          "OldPrice": "",
+          "Price": "29",
+          "OldPrice": "36",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
@@ -534,19 +534,19 @@
     {
       "Name": "Удаление доброкачественных образований (папиллома, кератома, контагиозный моллюск)",
       "Description": "",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
-          "Name": "На коже тела:",
+          "Name": "Образования:",
           "Price": "",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
-          "Currency": "  "
+          "Currency": ""
         },
         {
-          "Name": "На коже тела (до 0.2 см)",
+          "Name": "     - до 0.2 см",
           "Price": "110",
           "OldPrice": "",
           "StartPrice": "",
@@ -555,7 +555,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "На коже тела (до 0.4 см)",
+          "Name": "     - до 0.4 см",
           "Price": "160",
           "OldPrice": "",
           "StartPrice": "",
@@ -564,7 +564,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "На коже тела (более 0.4 см)",
+          "Name": "     - более 0.4 см",
           "Price": "270",
           "OldPrice": "",
           "StartPrice": "",
@@ -591,7 +591,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Удаление 10 и более елементов – скидка 10%",
+          "Name": "Удаление 10 и более элементов",
           "Price": "-10%",
           "OldPrice": "",
           "StartPrice": "",
@@ -600,7 +600,7 @@
           "Currency": "%"
         },
         {
-          "Name": "20 и более елементов",
+          "Name": "     - 20 и более элементов",
           "Price": "-20%",
           "OldPrice": "",
           "StartPrice": "",
@@ -609,7 +609,7 @@
           "Currency": "%"
         },
         {
-          "Name": "30 и более елементов",
+          "Name": "     - 30 и более элементов",
           "Price": "-30%",
           "OldPrice": "",
           "StartPrice": "",
@@ -688,7 +688,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Пилинг срединный ТСА + перекись водорода",
+          "Name": "Пилинг срединнфй ТСА модифицированный",
           "Price": "2200",
           "OldPrice": "",
           "StartPrice": "",
@@ -717,12 +717,12 @@
       ]
     },
     {
-      "Name": "Пилинги-уходы",
+      "Name": "Пилинг-уход",
       "Description": "",
       "Multiplier": 1,
       "Services": [
         {
-          "Name": "Пилинг энзимный",
+          "Name": "Энзимный пилинг",
           "Price": "690",
           "OldPrice": "",
           "StartPrice": "",
@@ -749,7 +749,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Феруловый пилинг ревитализация",
+          "Name": "Феруловый пилинг + ревитализация",
           "Price": "1190",
           "OldPrice": "",
           "StartPrice": "",
@@ -759,7 +759,7 @@
         },
         {
           "Name": "Осветляющая процедура + ультраувлажнение ЗО",
-          "Price": "1540",
+          "Price": "1260",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -768,7 +768,7 @@
         },
         {
           "Name": "Пилинг с факторами роста",
-          "Price": "1260",
+          "Price": "1460",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -783,7 +783,7 @@
       "Multiplier": 1,
       "Services": [
         {
-          "Name": "Ультразвуковая чистка",
+          "Name": "Ультразвуковая",
           "Price": "390",
           "OldPrice": "",
           "StartPrice": "",
@@ -792,7 +792,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Чистка атравматическая лица",
+          "Name": "Атравматическая",
           "Price": "860",
           "OldPrice": "",
           "StartPrice": "",
@@ -801,7 +801,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Чистка дермомагнитная",
+          "Name": "Дермомагнитная",
           "Price": "970",
           "OldPrice": "",
           "StartPrice": "",
@@ -810,7 +810,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Салициловая чистка",
+          "Name": "Салициловая",
           "Price": "790",
           "OldPrice": "",
           "StartPrice": "",
@@ -821,9 +821,9 @@
       ]
     },
     {
-      "Name": "Косметические уходы лица",
+      "Name": "Косметический уход лица",
       "Description": "",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Пластифицирующая гидрогелевая маска «By the Doctor»",
@@ -863,7 +863,7 @@
         },
         {
           "Name": "Уходы Дермофизиолоджик",
-          "Price": "от 880",
+          "Price": "790",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -889,7 +889,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Глубокое увлажнение + лифтинг ( с морским коллагеном) на аппарате дуолифт эксперт",
+          "Name": "Глубокое увлажнение + лифтинг ( с морским коллагеном) нааппарате дуолифт эксперт",
           "Price": "980",
           "OldPrice": "",
           "StartPrice": "",
@@ -900,7 +900,7 @@
       ]
     },
     {
-      "Name": "Косметические уходы тела",
+      "Name": "Комплекс по уходу за телом",
       "Description": "",
       "Multiplier": 2,
       "Services": [
@@ -941,7 +941,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Антицеллюлитная и укрепляющая",
+          "Name": "Антицеллюлитный и укрепляющий",
           "Price": "870",
           "OldPrice": "",
           "StartPrice": "",
@@ -950,7 +950,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Программа (талассо)",
+          "Name": "Талассо",
           "Price": "880",
           "OldPrice": "",
           "StartPrice": "",
@@ -959,8 +959,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "фиброзного целлюлита",
-          "Price": "",
+          "Name": "Бандажное обертывание, лечение фиброзного целлюлита",
+          "Price": "880",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -968,7 +968,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Реминирализирующее шелковое обертывание «кокон»",
+          "Name": "Реминирализирующее шелковое обертывание «Кокон»",
           "Price": "480",
           "OldPrice": "",
           "StartPrice": "",
@@ -977,7 +977,16 @@
           "Currency": "UAH"
         },
         {
-          "Name": "дермотония 45 мин",
+          "Name": "Дермотония:",
+          "Price": "",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": ""
+        },
+        {
+          "Name": "     -45 мин",
           "Price": "720",
           "OldPrice": "",
           "StartPrice": "",
@@ -986,7 +995,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "дермотония 60 мин",
+          "Name": "     -60 мин",
           "Price": "780",
           "OldPrice": "",
           "StartPrice": "",
@@ -995,7 +1004,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "дермотония 90 мин",
+          "Name": "     -90 мин",
           "Price": "860",
           "OldPrice": "",
           "StartPrice": "",
@@ -1006,7 +1015,7 @@
       ]
     },
     {
-      "Name": "Ваккумный–лимфодренажный массаж",
+      "Name": "Ваккумный лимфодренажный массаж",
       "Description": "На аппарате «SkintonicV6»",
       "Multiplier": 1,
       "Services": [
@@ -1033,7 +1042,7 @@
     {
       "Name": "Лазерная эпиляция (голова)",
       "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Лицо полностью",
@@ -1119,65 +1128,13 @@
       ]
     },
     {
-      "Name": "Лазерная эпиляция мужская (руки)",
+      "Name": "Лазерная эпиляция (для дам)",
       "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
+      "Multiplier": 2,
       "Services": [
         {
-          "Name": "Руки полностью",
-          "Price": "850",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Руки до локтя",
-          "Price": "600",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Кисти рук + пальцы",
-          "Price": "300",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Подмышки",
-          "Price": "450",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        }
-      ]
-    },
-    {
-      "Name": "Лазерная эпиляция мужская (верх)",
-      "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
-      "Services": [
-        {
-          "Name": "Живот",
-          "Price": "700",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Грудь",
-          "Price": "800",
+          "Name": "Плечи",
+          "Price": "350",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1186,7 +1143,7 @@
         },
         {
           "Name": "Спина",
-          "Price": "1450",
+          "Price": "950",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1194,24 +1151,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Плечи",
-          "Price": "500",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        }
-      ]
-    },
-    {
-      "Name": "Лазерная эпиляция мужская (низ)",
-      "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
-      "Services": [
-        {
-          "Name": "Ноги полностью",
-          "Price": "1800",
+          "Name": "Декольте",
+          "Price": "200",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1219,8 +1160,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Ноги до колена",
-          "Price": "800",
+          "Name": "Грудь",
+          "Price": "600",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1228,8 +1169,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Лобок",
-          "Price": "700",
+          "Name": "Ореол молочных желез",
+          "Price": "200",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1237,21 +1178,14 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Бикини полное",
-          "Price": "1100",
+          "Name": "Живот",
+          "Price": "400",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
           "Currency": "UAH"
-        }
-      ]
-    },
-    {
-      "Name": "Лазерная эпиляция женская (руки)",
-      "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
-      "Services": [
+        },
         {
           "Name": "Руки полностью",
           "Price": "650",
@@ -1287,75 +1221,7 @@
           "EndPrice": "",
           "Description": "",
           "Currency": "UAH"
-        }
-      ]
-    },
-    {
-      "Name": "Лазерная эпиляция женская (верх)",
-      "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
-      "Services": [
-        {
-          "Name": "Живот",
-          "Price": "400",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
         },
-        {
-          "Name": "Грудь",
-          "Price": "600",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Декольте",
-          "Price": "200",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Спина",
-          "Price": "950",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Плечи",
-          "Price": "350",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Ореол молочных желез",
-          "Price": "200",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        }
-      ]
-    },
-    {
-      "Name": "Лазерная эпиляция женская (низ)",
-      "Description": "на аппарате Light Sheer Duet",
-      "Multiplier": 1,
-      "Services": [
         {
           "Name": "Ноги полностью",
           "Price": "1500",
@@ -1384,7 +1250,7 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Лобок",
+          "Name": "Бикини глубокое",
           "Price": "300",
           "OldPrice": "",
           "StartPrice": "",
@@ -1404,9 +1270,124 @@
       ]
     },
     {
-      "Name": "Лазерная эпиляция (общая)",
+      "Name": "Лазерная эпиляция (для мужчин)",
       "Description": "на аппарате Light Sheer Duet",
       "Multiplier": 2,
+      "Services": [
+        {
+          "Name": "Плечи",
+          "Price": "500",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Спина",
+          "Price": "1450",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Грудь",
+          "Price": "800",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Живот",
+          "Price": "700",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Руки полностью",
+          "Price": "850",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Руки до локтя",
+          "Price": "600",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Кисти рук + пальцы",
+          "Price": "300",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Подмышки",
+          "Price": "450",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Ноги полностью",
+          "Price": "1800",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Ноги до колена",
+          "Price": "800",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Лобок",
+          "Price": "700",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Бикини полное (мужское)",
+          "Price": "1100",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        }
+      ]
+    },
+    {
+      "Name": "Лазерная эпиляция (общая)",
+      "Description": "на аппарате Light Sheer Duet",
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Белая линия живота",
@@ -1442,7 +1423,7 @@
           "StartPrice": "",
           "EndPrice": "",
           "Description": "",
-          "Currency": "UAH"
+          "Currency": ""
         },
         {
           "Name": "4 зоны на выбор",
@@ -1458,7 +1439,7 @@
     {
       "Name": "Восковая депиляция",
       "Description": "",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Бикини (глубокое)",
@@ -1525,7 +1506,7 @@
         },
         {
           "Name": "Лицо (1 зона)",
-          "Price": "200",
+          "Price": "190",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1537,7 +1518,7 @@
     {
       "Name": "Шугаринг. Сахарная депияция",
       "Description": "",
-      "Multiplier": 2,
+      "Multiplier": 1,
       "Services": [
         {
           "Name": "Бикини (глубокое)",
