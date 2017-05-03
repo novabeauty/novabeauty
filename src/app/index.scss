@@ -652,10 +652,12 @@ html {
   .logo{
     background-image: url(../assets/images/koltunova.svg);
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
     background-position: center;
     min-height: 20vh;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    -moz-background-size: 75% auto;
+    background-size: 75% auto;
   }
 }
 
@@ -806,7 +808,7 @@ div.partners{
     font-size: 18px;
     text-transform: uppercase;
     vertical-align: middle;
-    height: 80px;
+    height: 100px;
     border-bottom: 1px solid rgba(0,0,0, .3);
     display: flex;
     align-items: center;
