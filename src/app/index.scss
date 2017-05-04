@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i');
 
 @import "breakpoint";
 
@@ -21,7 +22,8 @@ $screen-wide: 1440px;
 
 $screen-mobile: 0 1024px;
 $screen-desktop: 960px;
-$body-font-family: 'Open Sans', sans-serif;
+//$body-font-family: 'Open Sans', sans-serif;
+$body-font-family: 'PT Serif', serif;
 
 @font-face {
   font-family: 'Material Icons';
@@ -161,19 +163,34 @@ html {
   font-family: 'Playfair Display', serif;
   color: white;
   padding-top: 30vh;
+  padding-left: 6%;
   @include breakpoint($screen-mobile){
-    padding-top: 0;
+    padding-top: 15vh;
+    background-color: rgba(0, 0, 0, .4);
+    .slogan-author{
+      font-size: 12px;
+      padding-top: 5px;
+      color: rgba(255,255,255, .8);
+    }
   }
   .slogan-text{
     font-size: 3.4rem;
-
-    width: 60%;
-
-    margin-left: 6%;
+    width: 50%;
 
     @include breakpoint($screen-mobile){
-      font-size: 1.4rem;
-      width: 50%;
+      font-size: 1.2rem;
+      width: 80%;
+    }
+  }
+  .slogan-author{
+    font-size: 32px;
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 1);
+
+    @include breakpoint($screen-mobile){
+      font-size: 12px;
+      padding-top: 5px;
+      color: rgba(255,255,255, .8);
     }
   }
   .slogan-quote-start, .slogan-quote-end{
@@ -301,10 +318,15 @@ html {
     -ms-flex: 1 1 50%;
     flex: 1 1 50%;
     max-width: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/koltunova.png);
   }
 
   @include breakpoint($screen-mobile){
-    min-height: 180vh;
+    //min-height: 180vh;
 
     .article-item{
       order: 2;
@@ -315,6 +337,9 @@ html {
       -ms-flex: 1;
       flex: 1;
       max-width: 100%;
+      background-image: none;
+      height: 40vw;
+      max-height: 40vw;
     }
     padding: 0;
   }
@@ -885,16 +910,7 @@ div.partners{
     }
   }
 }
-.koltunova-photo{
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../assets/images/koltunova.png);
-  @include breakpoint($screen-mobile){
-    min-height: 50vh;
-  }
-}
+
 
 .koltunova-portrait{
   background-repeat: no-repeat;
