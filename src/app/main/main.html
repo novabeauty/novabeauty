@@ -50,7 +50,7 @@
         <div class="section-arrow rectangle-45"><i class="material-icons">arrow_downward</i></div>
 
       </div>
-      <div class="menu-container gradient-background" layout-align="center">
+      <div class="menu-container gradient-background" layout-align="space-between" layout="column" layout-fill>
         <md-list flex>
           <md-list-item ng-click="main.scrollToSection('#about')" class="md-primary">
             <md-icon md-svg-src="assets/images/n_logo.svg"></md-icon>
@@ -73,6 +73,22 @@
               <p>Как нас найти</p>
           </md-list-item>
         </md-list>
+        <div class="social-buttons" layout="row" layout-align="center center">
+          <md-button href="https://www.facebook.com/novabeauty.biz"
+                title="Мы в фейсбуке"
+                _target="_blank"
+                aria-label="facebook.com"
+                class="md-icon-button launch">
+            <md-icon md-svg-src="assets/images/fb.svg"></md-icon>
+          </md-button>
+          <md-button href="https://www.instagram.com/dr.nkoltunova"
+                     title="Мы в инстаграм"
+                     _target="_blank"
+                     aria-label="instagram.com"
+                     class="md-icon-button launch">
+            <md-icon md-svg-src="assets/images/inst.svg"></md-icon>
+          </md-button>
+        </div>
       </div>
     </div>
     <div layout="row" flex class="landing-image" layout-fill>
@@ -237,7 +253,7 @@
   </div>
 </div>
 <div layout="vertical" class="fifth-section gradient-background" id="location" layout-fill>
-  <div class="left-panel" flex="25" layout="column" layout-fill>
+  <div class="left-panel" flex="25" layout="column" layout-fill layout-align="space-between">
     <div class="section-title" layout="column" layout-align="center center">
       <div layout="row" layout-align="center center" class="wow bounceInDown" data-wow-duration="1s">
         <div class="section-circle">&nbsp;</div>
@@ -256,6 +272,22 @@
       <div flex class="direction-link">
         <md-button ng-click="main.openDirectionDialog()">Схема проезда   <md-icon md-svg-src="assets/images/right.svg"></md-icon></md-button>
       </div>
+    </div>
+    <div class="social-buttons" layout="row" layout-align="center center">
+      <md-button href="https://www.facebook.com/novabeauty.biz"
+                 title="Мы в фейсбуке"
+                 _target="_blank"
+                 aria-label="facebook.com"
+                 class="md-icon-button launch">
+        <md-icon md-svg-src="assets/images/fb.svg"></md-icon>
+      </md-button>
+      <md-button href="https://www.instagram.com/dr.nkoltunova"
+                 title="Мы в инстаграм"
+                 _target="_blank"
+                 aria-label="instagram.com"
+                 class="md-icon-button launch">
+        <md-icon md-svg-src="assets/images/inst.svg"></md-icon>
+      </md-button>
     </div>
   </div>
   <div layout-gt-md="row" layout-xs="column" layout-sm="column" layout-md="column" flex class="contact-container" layout-fill layout-align="stretch">

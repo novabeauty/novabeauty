@@ -107,10 +107,10 @@ html {
 }
 
 .fifth-section{
-  max-height: 6100px;
+
   .left-panel{
-    max-height: 610px;
-    min-height: 610px;
+
+    min-height: 50vh;
   }
 }
 
@@ -158,6 +158,9 @@ html {
   background-size: cover;
   background-position: center;
 }
+.social-buttons{
+  padding-bottom: 15px;
+}
 
 .slogan{
   font-family: 'Playfair Display', serif;
@@ -174,12 +177,12 @@ html {
     }
   }
   .slogan-text{
-    font-size: 3.4rem;
+    font-size: 3rem;
     width: 50%;
 
     @include breakpoint($screen-mobile){
       font-size: 1.2rem;
-      width: 80%;
+      width: 50%;
     }
   }
   .slogan-author{

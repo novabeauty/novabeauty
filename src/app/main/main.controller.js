@@ -22,6 +22,13 @@
       return "price-section-image-"+index;
     };
 
+    var fbProfile = "https://www.facebook.com/novabeauty.biz";
+    var instaProfile = "https://www.instagram.com/dr.nkoltunova/";
+
+    vm.openSocial = function(social){
+
+    };
+
     vm.callNB = function(){
       window.location.href="tel://+380675076085";
     };
