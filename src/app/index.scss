@@ -169,7 +169,7 @@ html {
   padding-left: 6%;
   @include breakpoint($screen-mobile){
     padding-top: 15vh;
-    background-color: rgba(0, 0, 0, .4);
+
     .slogan-author{
       font-size: 12px;
       padding-top: 5px;
@@ -179,6 +179,7 @@ html {
   .slogan-text{
     font-size: 3rem;
     width: 50%;
+    font-style: italic;
 
     @include breakpoint($screen-mobile){
       font-size: 1.2rem;
