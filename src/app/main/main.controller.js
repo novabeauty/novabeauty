@@ -57,7 +57,7 @@
         $('#readAll').hide();
 
         $('.koltunova-certificates').slick({
-          dots: true,
+          dots: false,
           infinite: true,
           slidesToShow: 1,
           centerMode: true,

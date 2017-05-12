@@ -1012,6 +1012,12 @@ body:after{
   color: #FAFAFA;
   z-index: 1000;
 }
+.koltunova-certificates{
+  img{
+    height: 30vh;
+    margin: 0 15px;
+  }
+}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
