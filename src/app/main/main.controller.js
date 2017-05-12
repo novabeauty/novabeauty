@@ -55,6 +55,14 @@
         $('#aboutKoltunova').toggleClass('increase-width')
 
         $('#readAll').hide();
+
+        $('.koltunova-certificates').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true
+        });
       };
 
       $scope.cancel = function() {
@@ -64,6 +72,13 @@
       $scope.answer = function(answer) {
         $mdDialog.hide(answer);
       };
+
+      $scope.certificates = new Array();
+
+      for(var c = 1; c< 47; c++){
+        var image_path = 'assets/images/certs/' + c + '.jpg';
+        $scope.certificates.push({'path' : image_path});
+      }
     }
 
     vm.openDirectionDialog = function(ev){
@@ -248,6 +263,7 @@
         }
 
       });
+
     }
   }
 })();

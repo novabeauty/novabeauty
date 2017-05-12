@@ -21,11 +21,11 @@
               <div class="price-section-prices" layout="column">
                 <div class="price-section-item" ng-repeat="service in serviceCategory.Services" layout="row"
                      layout-align="space-between start">
-                  <div class="price-section-item-name" flex="70">{{service.Name}}</div>
+                  <div class="price-section-item-name" flex="70"><md-icon md-svg-src="assets/images/sale.svg" ng-show="service.OldPrice > 0"></md-icon> {{service.Name}}</div>
                   <div class="price-section-item-price-container" layout="column">
                     <div class="main-price">
                       <span style="text-decoration: line-through; font-weight: 100;">{{service.OldPrice}}</span>
-                      {{service.Price}} <span ng-show="service.Currency !== '%'">{{service.Currency}}</span>
+                      <span ng-class="{'item_sale' : service.OldPrice > 0}">{{service.Price}}</span> <span ng-show="service.Currency !== '%'">{{service.Currency}}</span>
                     </div>
                   </div>
                 </div>
@@ -34,6 +34,7 @@
           </md-grid-tile>
         </md-grid-list>
       </div>
+      <div layout-align="center center" flex layout-fill><h2 style="text-align: center;">Оплата производится в гривне по курсу на момент полаты.</h2></div>
     </md-dialog-content>
   </form>
 </md-dialog>

@@ -883,6 +883,10 @@ div.partners{
       .main-price{
         font-weight: 500;
         text-align: right;
+        .item_sale{
+          font-size: 18px;
+          color: #f44336;
+        }
       }
       .secondary-price{
         font-size: 16px;
@@ -996,6 +1000,17 @@ body:after{
   display:none;
   background-image: url(../assets/images/s_1.jpg);
   content: url(../assets/images/tour.jpg)  url(../assets/images/s_1.jpg)  url(../assets/images/s_2.jpg)  url(../assets/images/s_3.jpg)  url(../assets/images/s_4.jpg)  url(../assets/images/s_5.jpg)  url(../assets/images/s_6.jpg) url(../assets/images/map.jpg);
+}
+
+.undersontraction{
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FF5722;
+  color: #FAFAFA;
+  z-index: 1000;
 }
 
 /**
