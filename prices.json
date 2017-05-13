@@ -1046,7 +1046,7 @@
       "Services": [
         {
           "Name": "Лицо полностью",
-          "Price": "650",
+          "Price": "700",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1055,7 +1055,7 @@
         },
         {
           "Name": "Верхняя губа",
-          "Price": "200",
+          "Price": "220",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1064,7 +1064,7 @@
         },
         {
           "Name": "Нижняя губа",
-          "Price": "200",
+          "Price": "220",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1073,7 +1073,7 @@
         },
         {
           "Name": "Подбородок",
-          "Price": "280",
+          "Price": "300",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1082,7 +1082,7 @@
         },
         {
           "Name": "Щеки",
-          "Price": "250",
+          "Price": "280",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1091,7 +1091,7 @@
         },
         {
           "Name": "Виски",
-          "Price": "200",
+          "Price": "230",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1143,7 +1143,7 @@
         },
         {
           "Name": "Спина",
-          "Price": "950",
+          "Price": "1000",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1170,7 +1170,7 @@
         },
         {
           "Name": "Ореол молочных желез",
-          "Price": "200",
+          "Price": "250",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1188,7 +1188,7 @@
         },
         {
           "Name": "Руки полностью",
-          "Price": "650",
+          "Price": "700",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1197,51 +1197,6 @@
         },
         {
           "Name": "Руки до локтя",
-          "Price": "500",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Кисти рук + пальцы",
-          "Price": "200",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Подмышки",
-          "Price": "350",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Ноги полностью",
-          "Price": "1500",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Ноги до колена",
-          "Price": "800",
-          "OldPrice": "",
-          "StartPrice": "",
-          "EndPrice": "",
-          "Description": "",
-          "Currency": "UAH"
-        },
-        {
-          "Name": "Бикини по линии трусиков",
           "Price": "550",
           "OldPrice": "",
           "StartPrice": "",
@@ -1250,8 +1205,53 @@
           "Currency": "UAH"
         },
         {
+          "Name": "Кисти рук + пальцы",
+          "Price": "250",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Подмышки",
+          "Price": "400",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Ноги полностью",
+          "Price": "1650",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Ноги до колена",
+          "Price": "850",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
+          "Name": "Бикини по линии трусиков",
+          "Price": "600",
+          "OldPrice": "",
+          "StartPrice": "",
+          "EndPrice": "",
+          "Description": "",
+          "Currency": "UAH"
+        },
+        {
           "Name": "Бикини глубокое",
-          "Price": "300",
+          "Price": "350",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1260,7 +1260,7 @@
         },
         {
           "Name": "Бикини полное",
-          "Price": "800",
+          "Price": "870",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1270,13 +1270,13 @@
       ]
     },
     {
-      "Name": "Лазерная эпиляция (для мужчин)",
+      "Name": "Лазерная эпиляция (для мужсчин)",
       "Description": "на аппарате Light Sheer Duet",
       "Multiplier": 2,
       "Services": [
         {
           "Name": "Плечи",
-          "Price": "500",
+          "Price": "550",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1285,7 +1285,7 @@
         },
         {
           "Name": "Спина",
-          "Price": "1450",
+          "Price": "1500",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1339,7 +1339,7 @@
         },
         {
           "Name": "Подмышки",
-          "Price": "450",
+          "Price": "500",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1348,7 +1348,7 @@
         },
         {
           "Name": "Ноги полностью",
-          "Price": "1800",
+          "Price": "2000",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1366,7 +1366,7 @@
         },
         {
           "Name": "Лобок",
-          "Price": "700",
+          "Price": "850",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1374,8 +1374,8 @@
           "Currency": "UAH"
         },
         {
-          "Name": "Бикини полное (мужское)",
-          "Price": "1100",
+          "Name": "Бикини полное",
+          "Price": "1200",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
@@ -1400,7 +1400,7 @@
         },
         {
           "Name": "Торс",
-          "Price": "450",
+          "Price": "600",
           "OldPrice": "",
           "StartPrice": "",
           "EndPrice": "",
