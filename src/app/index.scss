@@ -1018,6 +1018,23 @@ body:after{
     margin: 0 15px;
   }
 }
+.direction-disclaimer{
+  display: none;
+  @include breakpoint($screen-mobile){
+    display: block;
+  }
+  background-color: rgba(255, 255, 255, .7);
+  margin: 5vh;
+  padding: 5vh;
+  .disclaimer-text{
+    color: $accent-color;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+  .direction-link{
+    margin-left: -15px;
+  }
+}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
