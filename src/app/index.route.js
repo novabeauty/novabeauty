@@ -6,6 +6,7 @@
     .config(routeConfig);
 
   function routeConfig($routeProvider) {
+    $routeProvider.enableHTM
     $routeProvider
       .when('/clinic', {
         templateUrl: 'app/main/main.html',
