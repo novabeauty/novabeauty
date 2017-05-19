@@ -255,14 +255,14 @@
         //}
         vm.services = result.data.categories;
       }, function(){console.log("failed");});
-      $http.get(exchangeApi).then(function(result)
-      {
-        for(var index in result.data.query.results.rate){
-          var obj = result.data.query.results.rate[index];
-          rates[obj.id] = obj.Rate;
-        }
-
-      });
+      //$http.get(exchangeApi).then(function(result)
+      //{
+      //  for(var index in result.data.query.results.rate){
+      //    var obj = result.data.query.results.rate[index];
+      //    rates[obj.id] = obj.Rate;
+      //  }
+      //
+      //});
 
     }
   }
